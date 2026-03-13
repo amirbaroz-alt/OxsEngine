@@ -1,0 +1,5968 @@
+[
+  {
+    "_id": "69a22409e35313ca389bf752",
+    "name": "hello_world",
+    "tenantId": "698d60cce106e5fa0bc7806b",
+    "language": "en_US",
+    "__v": 0,
+    "bodyText": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us.",
+    "category": "UTILITY",
+    "components": [
+      {
+        "type": "HEADER",
+        "format": "TEXT",
+        "text": "Hello World"
+      },
+      {
+        "type": "BODY",
+        "text": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us."
+      },
+      {
+        "type": "FOOTER",
+        "text": "WhatsApp Business Platform sample message"
+      }
+    ],
+    "createdAt": "2026-02-27T23:08:57.212Z",
+    "metaTemplateId": "608143205342838",
+    "status": "APPROVED",
+    "updatedAt": "2026-03-04T07:01:53.600Z",
+    "variableMapping": {},
+    "lastSynced": "2026-03-04T07:01:53.599Z",
+    "rejectedReason": null,
+    "isActive": true
+  },
+  {
+    "_id": "69a79d66b51acc4e1bb3b899",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "hello",
+    "friendlyName": "יצירת קשר",
+    "status": "REJECTED",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים"
+      }
+    ],
+    "bodyText": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "rawBodyContent": "שלום {{CUSTOMER_NAME}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{EMPLOYEE}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "metaTemplateId": "1575431520427472",
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "CUSTOMER_NAME",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם לקוח",
+        "order": 1,
+        "hasDefault": false
+      },
+      {
+        "index": 2,
+        "fieldName": "EMPLOYEE",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם נציג",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "tagIds": [],
+    "lastSynced": "2026-03-05T01:32:29.786Z",
+    "createdAt": "2026-03-04T02:48:06.799Z",
+    "updatedAt": "2026-03-05T01:32:29.786Z",
+    "__v": 0,
+    "rejectedReason": null,
+    "isActive": true
+  },
+  {
+    "_id": "69a79d90e35313ca389dacf6",
+    "name": "hello_world",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "language": "en_US",
+    "__v": 0,
+    "bodyText": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us.",
+    "buttons": [],
+    "category": "UTILITY",
+    "components": [
+      {
+        "type": "HEADER",
+        "format": "TEXT",
+        "text": "Hello World"
+      },
+      {
+        "type": "BODY",
+        "text": "Welcome and congratulations!! This message demonstrates your ability to send a WhatsApp message notification from the Cloud API, hosted by Meta. Thank you for taking the time to test with us."
+      },
+      {
+        "type": "FOOTER",
+        "text": "WhatsApp Business Platform sample message"
+      }
+    ],
+    "createdAt": "2026-03-04T02:48:48.886Z",
+    "friendlyName": "טסט",
+    "lastSynced": "2026-03-05T01:32:30.100Z",
+    "metaTemplateId": "608143205342838",
+    "rawBodyContent": "",
+    "status": "APPROVED",
+    "tagIds": [],
+    "updatedAt": "2026-03-05T01:32:30.101Z",
+    "variableMapping": {},
+    "variables": [],
+    "rejectedReason": null,
+    "isActive": true
+  },
+  {
+    "_id": "69a7a182f928d25144c46392",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "hello_copy",
+    "friendlyName": "יצירת קשר",
+    "status": "APPROVED",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+        "example": {
+          "body_text": [
+            [
+              "שם לקוח",
+              "שם נציג"
+            ]
+          ]
+        }
+      }
+    ],
+    "bodyText": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "rawBodyContent": "שלום {{CUSTOMER_NAME}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{EMPLOYEE}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "metaTemplateId": "1670511320973275",
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "CUSTOMER_NAME",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם לקוח",
+        "order": 1,
+        "hasDefault": false
+      },
+      {
+        "index": 2,
+        "fieldName": "EMPLOYEE",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם נציג",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "tagIds": [],
+    "lastSynced": "2026-03-05T01:32:29.466Z",
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T03:05:38.463Z",
+    "updatedAt": "2026-03-05T01:32:29.466Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a7ce63b34ea5bc6dd5c743",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "getservice",
+    "friendlyName": "קבלת שירות - חזרה ללקוח",
+    "status": "PENDING",
+    "category": "UTILITY",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "{{1}} שלום,\nבהמשך לשיחתנו בנוגע ל{{2}}, אנא שלח הודעה כשיהיה לך נח ואחזור אליך בהקדם.\n\nבברכה,\n{{3}}\n\nבר-עוז המרכז לביטוח\nבתים משותפים\n{{4}}",
+        "example": {
+          "body_text": [
+            [
+              "שם לקוח",
+              "נושא",
+              "שם נציג",
+              "מספר חבר"
+            ]
+          ]
+        }
+      }
+    ],
+    "bodyText": "{{1}} שלום,\nבהמשך לשיחתנו בנוגע ל{{2}}, אנא שלח הודעה כשיהיה לך נח ואחזור אליך בהקדם.\n\nבברכה,\n{{3}}\n\nבר-עוז המרכז לביטוח\nבתים משותפים\n{{4}}",
+    "rawBodyContent": "{{CUSTOMER_NAME}} שלום,\nבהמשך לשיחתנו בנוגע ל{{SERVICE_SUBJECT}}, אנא שלח הודעה כשיהיה לך נח ואחזור אליך בהקדם.\n\nבברכה,\n{{AGENT_NAME}}\n\nבר-עוז המרכז לביטוח\nבתים משותפים\n{{BUILDING_ID}}",
+    "metaTemplateId": null,
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "CUSTOMER_NAME",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם לקוח",
+        "order": 1,
+        "hasDefault": false
+      },
+      {
+        "index": 2,
+        "fieldName": "SERVICE_SUBJECT",
+        "fieldType": "TEXT",
+        "friendlyLabel": "נושא",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "AGENT_NAME",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם נציג",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "BUILDING_ID",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "מספר חבר",
+        "order": 4,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T06:17:07.417Z",
+    "updatedAt": "2026-03-04T06:17:07.417Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a7d7fee35313ca389e7c8b",
+    "name": "hello_copy",
+    "language": "he",
+    "tenantId": "698d60cce106e5fa0bc7806b",
+    "__v": 0,
+    "bodyText": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "buttons": [],
+    "category": "MARKETING",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+        "example": {
+          "body_text": [
+            [
+              "שם לקוח",
+              "שם נציג"
+            ]
+          ]
+        }
+      }
+    ],
+    "createdAt": "2026-03-04T06:58:06.362Z",
+    "friendlyName": "",
+    "lastSynced": "2026-03-04T07:01:52.961Z",
+    "metaTemplateId": "1670511320973275",
+    "rawBodyContent": "",
+    "rejectedReason": null,
+    "status": "APPROVED",
+    "tagIds": [],
+    "updatedAt": "2026-03-04T07:01:52.961Z",
+    "variableMapping": {},
+    "variables": [],
+    "isActive": true
+  },
+  {
+    "_id": "69a7d7fee35313ca389e7c8c",
+    "name": "hello",
+    "language": "he",
+    "tenantId": "698d60cce106e5fa0bc7806b",
+    "__v": 0,
+    "bodyText": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים",
+    "buttons": [],
+    "category": "MARKETING",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום {{1}},\nאני מנסה ליצור עימך קשר. אנא שלח הודעה כשתהיה פנוי\n\nבברכה,\n{{2}}\nבר-עוז המרכז לביטוח\nבתים משותפים"
+      }
+    ],
+    "createdAt": "2026-03-04T06:58:06.676Z",
+    "friendlyName": "",
+    "lastSynced": "2026-03-04T07:01:53.289Z",
+    "metaTemplateId": "1575431520427472",
+    "rawBodyContent": "",
+    "rejectedReason": null,
+    "status": "REJECTED",
+    "tagIds": [],
+    "updatedAt": "2026-03-04T07:01:53.290Z",
+    "variableMapping": {},
+    "variables": [],
+    "isActive": true
+  },
+  {
+    "_id": "69a846e87b74b4c7e52bff57",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_new",
+    "friendlyName": "פוליסה חדשה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nבהמשך לשיחתנו לביטוח הבית המשותף בכתובת:  {{2}}\r\n\r\nמצ\"ב קישור להצעת ביטוח:\r\n{{3}}\r\n\r\nסיסמא לטופס:\r\n{{4}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: {{5}}\r\n\r\nבברכה,\r\n{{6}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nבהמשך לשיחתנו לביטוח הבית המשותף בכתובת:  {{CustomerAddress}}\r\n\r\nמצ\"ב קישור להצעת ביטוח:\r\n{{FormLink}}\r\n\r\nסיסמא לטופס:\r\n{{FormPassword}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: {{UserPhone}}\r\n\r\nבברכה,\r\n{{UserName}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      },
+      "4": {
+        "label": "סיסמא לטופס",
+        "source": "manual"
+      },
+      "5": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "6": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormPassword",
+        "fieldType": "TEXT",
+        "friendlyLabel": "סיסמא לטופס",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 6,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:20.775Z",
+    "updatedAt": "2026-03-04T14:51:20.775Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846e97b74b4c7e52bff5d",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_expired_renewal",
+    "friendlyName": "חידוש ביטוח מבנה שהסתיים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nביטוח הבית המשותף בכתובת {{2}} הסתיים ב-{{3}} ולא חודש.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{4}}\r\nסיסמא לטופס:\r\n{{5}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nביטוח הבית המשותף בכתובת {{CustomerAddress}} הסתיים ב-{{EndDate}} ולא חודש.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{FormLink}}\r\nסיסמא לטופס:\r\n{{FormPassword}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      },
+      "5": {
+        "label": "סיסמא לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "FormPassword",
+        "fieldType": "TEXT",
+        "friendlyLabel": "סיסמא לטופס",
+        "order": 5,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:21.112Z",
+    "updatedAt": "2026-03-04T14:51:21.112Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846e97b74b4c7e52bff60",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_renewal",
+    "friendlyName": "חידוש ביטח מבנה שעומד להסתיים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nביטוח הבית המשותף בכתובת {{2}} יסתיים ב-{{3}}.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{4}}\r\nסיסמא לטופס:\r\n{{5}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nביטוח הבית המשותף בכתובת {{CustomerAddress}} יסתיים ב-{{EndDate}}.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{FormLink}}\r\nסיסמא לטופס:\r\n{{FormPassword}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      },
+      "5": {
+        "label": "סיסמא לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "FormPassword",
+        "fieldType": "TEXT",
+        "friendlyLabel": "סיסמא לטופס",
+        "order": 5,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:21.440Z",
+    "updatedAt": "2026-03-04T14:51:21.440Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846e97b74b4c7e52bff63",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_earthquake_waiver",
+    "friendlyName": "ויתור על רעידת אדמה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך להליך רכישת פוליסת ביטוח לבית המשותף ב{{2}} -  נדרשת חתימתך על גבי טופס ויתור רעידת אדמה.\r\n\r\nנא להיכנס לקישור המצ\"ב:\r\n\r\n{{3}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך להליך רכישת פוליסת ביטוח לבית המשותף ב{{CustomerAddress}} -  נדרשת חתימתך על גבי טופס ויתור רעידת אדמה.\r\n\r\nנא להיכנס לקישור המצ\"ב:\r\n\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:21.768Z",
+    "updatedAt": "2026-03-04T14:51:21.768Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ea7b74b4c7e52bff66",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_committee_member_update",
+    "friendlyName": "עדכון פרטי ועד הבית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאודה לעזרך בעדכון פרטי ועד הבית הנוכחי בכתובת:\r\n{{2}}.\r\nנשמח לקבל: שם מלא, טלפון נייד, דוא\"ל (ככל שקיים).\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאודה לעזרך בעדכון פרטי ועד הבית הנוכחי בכתובת:\r\n{{CustomerAddress}}.\r\nנשמח לקבל: שם מלא, טלפון נייד, דוא\"ל (ככל שקיים).\r\n\r\nבברכה,\r\n{{UserEmail}}\r\n{{UserName}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      },
+      "4": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:22.093Z",
+    "updatedAt": "2026-03-04T14:51:22.093Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ea7b74b4c7e52bff69",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_aminut_express_contact",
+    "friendlyName": "אמינות אקספרס (כלל)- יצירת קשר",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nהטלפון של חברת ההסדר \"אמינות אקספרס\": 073-3853333.\r\nהמוקד פועל 24 שעות ביממה, 7 ימים בשבוע.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nהטלפון של חברת ההסדר \"אמינות אקספרס\": 073-3853333.\r\nהמוקד פועל 24 שעות ביממה, 7 ימים בשבוע.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:22.421Z",
+    "updatedAt": "2026-03-04T14:51:22.421Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ea7b74b4c7e52bff6c",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_renewal_alert",
+    "friendlyName": "התראת חידוש ביטוח",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nניסינו להשיגך לגבי חידוש ביטוח ועד הבית אך ללא הצלחה.\r\nאנא צור אתנו קשר בטלפון 03-5020100.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nניסינו להשיגך לגבי חידוש ביטוח ועד הבית אך ללא הצלחה.\r\nאנא צור אתנו קשר בטלפון 03-5020100.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:22.757Z",
+    "updatedAt": "2026-03-04T14:51:22.757Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846eb7b74b4c7e52bff6f",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_hca_entitlement",
+    "friendlyName": "אגודה לתרבות הדיור - בדיקת זכאות",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לפנייתך לביטוח הבניין עבור חברי האגודה לתרבות הדיור,\r\nיש ליצור קשר עם האגודה לתרבות הדיור לקבלת אישור לזכאות\r\nבטלפון: 8484* או בדוא\"ל: bituach@tarbut-hadiur.gov.il\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לפנייתך לביטוח הבניין עבור חברי האגודה לתרבות הדיור,\r\nיש ליצור קשר עם האגודה לתרבות הדיור לקבלת אישור לזכאות\r\nבטלפון: 8484* או בדוא\"ל: bituach@tarbut-hadiur.gov.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:23.079Z",
+    "updatedAt": "2026-03-04T14:51:23.079Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846eb7b74b4c7e52bff72",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_hca_appeal_confirmation",
+    "friendlyName": "אגודה לתרבות הדיור - אישור פנייה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיבלנו את פנייתך לביטוח הבניין עבור חברי האגודה לתרבות הדיור,\r\nאנו ניצור איתך קשר בהקדם האפשרי.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיבלנו את פנייתך לביטוח הבניין עבור חברי האגודה לתרבות הדיור,\r\nאנו ניצור איתך קשר בהקדם האפשרי.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:23.415Z",
+    "updatedAt": "2026-03-04T14:51:23.415Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846eb7b74b4c7e52bff75",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_aminut_express_contact_pnx",
+    "friendlyName": "אמינות אקספרס (פניקס) - יצירת קשר",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nהטלפון של חברת ההסדר \"אמינות אקספרס\": 073-2076110.\r\nהמוקד פועל 24 שעות ביממה, 7 ימים בשבוע.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nהטלפון של חברת ההסדר \"אמינות אקספרס\": 073-2076110.\r\nהמוקד פועל 24 שעות ביממה, 7 ימים בשבוע.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:23.737Z",
+    "updatedAt": "2026-03-04T14:51:23.737Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ec7b74b4c7e52bff78",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_incorrect_checks",
+    "friendlyName": "צ'קים שגויים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nברצוני לעדכן שהתקבלו שיקים במשרדינו עבור {{2}}, אך הם שגויים.\r\n\r\nניסינו להשיגך אך לא היה מענה,\r\nאנא צור אתנו קשר בווטסאפ או בטלפון במספר 03-5020100.\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nברצוני לעדכן שהתקבלו שיקים במשרדינו עבור {{CustomerAddress}}, אך הם שגויים.\r\n\r\nניסינו להשיגך אך לא היה מענה,\r\nאנא צור אתנו קשר בווטסאפ או בטלפון במספר 03-5020100.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:24.060Z",
+    "updatedAt": "2026-03-04T14:51:24.060Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ec7b74b4c7e52bff7b",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_incorrect_checks_v2",
+    "friendlyName": "צ'קים שגויים עם יתרת חוב",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nהתקבלו שיקים עבור {{2}},\r\nועדיין קיימת יתרת חוב בסך {{3}}.\r\n\r\nניסינו להשיגך אך לא היה מענה,\r\nאנא צור אתנו קשר בווטסאפ או בטלפון במספר 03-5020100.\r\n\r\nבברכה,\r\n{{4}}\r\n{{5}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nהתקבלו שיקים עבור {{CustomerAddress}},\r\nועדיין קיימת יתרת חוב בסך {{DebtAmount}}.\r\n\r\nניסינו להשיגך אך לא היה מענה,\r\nאנא צור אתנו קשר בווטסאפ או בטלפון במספר 03-5020100.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "5": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 5,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:24.387Z",
+    "updatedAt": "2026-03-04T14:51:24.387Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ec7b74b4c7e52bff7e",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_commercial_area_waiver",
+    "friendlyName": "ויתור על שטחים מסחריים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך להליך רכישת פוליסת ביטוח לבית המשותף ב{{2}} -  נדרשת חתימתך על גבי טופס ויתור שטחים מסחריים.\r\n\r\nנא להיכנס לקישור המצ\"ב:\r\n\r\n{{3}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך להליך רכישת פוליסת ביטוח לבית המשותף ב{{CustomerAddress}} -  נדרשת חתימתך על גבי טופס ויתור שטחים מסחריים.\r\n\r\nנא להיכנס לקישור המצ\"ב:\r\n\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:24.714Z",
+    "updatedAt": "2026-03-04T14:51:24.714Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ed7b74b4c7e52bff81",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_customer_service_manager",
+    "friendlyName": "שירות - מנהל שירות לקוחות",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאני מנהל שירות הלקוחות בברעוז.\r\n\r\nאשמח אם נוכל לדבר לגבי ביטוח הבניין בכתובת {{2}}.\r\n\r\nמתי יהיה לך נוח?\r\n\r\nניתן גם להתקשר אלי במספר\r\n{{3}}\r\n\r\nאו במענה להודעה זו.\r\n\r\n\r\nבברכה,\r\n{{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאני מנהל שירות הלקוחות בברעוז.\r\n\r\nאשמח אם נוכל לדבר לגבי ביטוח הבניין בכתובת {{CustomerAddress}}.\r\n\r\nמתי יהיה לך נוח?\r\n\r\nניתן גם להתקשר אלי במספר\r\n{{UserPhone}}\r\n\r\nאו במענה להודעה זו.\r\n\r\n\r\nבברכה,\r\n{{UserName}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:25.039Z",
+    "updatedAt": "2026-03-04T14:51:25.039Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ed7b74b4c7e52bff84",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_dcr_update",
+    "friendlyName": "שירות-עדכון חדר לקוח דיגיטלי",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "שלום {{1}},\r\n\r\nהאזור האישי שלך עודכן ע\"י {{2}}.\r\nניתן להיכנס לאזור האישי בקישור הבא:\r\n{{3}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "שלום {{ContactPersonName}},\r\n\r\nהאזור האישי שלך עודכן ע\"י {{UserName}}.\r\nניתן להיכנס לאזור האישי בקישור הבא:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:25.370Z",
+    "updatedAt": "2026-03-04T14:51:25.370Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ed7b74b4c7e52bff87",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_open_claim",
+    "friendlyName": "תביעות-עדכון על פתיחת תביעה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך להתקשרותנו, אנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{2}}\r\nומונה השמאי {{3}}.\r\nהשמאי יצור עמך קשר לתיאום הגעה ובהתאם לכך יעביר את חוות דעתו לחברת הביטוח.\r\n\r\nכמובן שאנו מלווים את התביעה יחד עמכם ועומדים לרשותכם לכל שאלה ו/או בקשה\r\nבטלפון 03-5020100 ו/או במייל שכתובתו tviot@baroz.co.il.\r\n\r\nבברכה,\r\n{{4}}\r\n{{5}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך להתקשרותנו, אנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{ClaimNumber}}\r\nומונה השמאי {{AppraiserName}}.\r\nהשמאי יצור עמך קשר לתיאום הגעה ובהתאם לכך יעביר את חוות דעתו לחברת הביטוח.\r\n\r\nכמובן שאנו מלווים את התביעה יחד עמכם ועומדים לרשותכם לכל שאלה ו/או בקשה\r\nבטלפון 03-5020100 ו/או במייל שכתובתו tviot@baroz.co.il.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "מספר תביעה",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם שמאי",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "5": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "ClaimNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר תביעה",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "AppraiserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם שמאי",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 5,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:25.706Z",
+    "updatedAt": "2026-03-04T14:51:25.706Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ee7b74b4c7e52bff8a",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claim_first_answer",
+    "friendlyName": "תביעות-מענה ראשוני",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\nהפנייה הועברה ל- {{2}}\r\nמיישב/ת התביעה במשרדנו להמשך טיפול.\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\nהפנייה הועברה ל- {{DynamicField1}}\r\nמיישב/ת התביעה במשרדנו להמשך טיפול.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:26.047Z",
+    "updatedAt": "2026-03-04T14:51:26.047Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ee7b74b4c7e52bff8d",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_third_party",
+    "friendlyName": "תביעות-טיפול בצד ג",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nעל מנת להגיש תביעת צד ג' יש להעביר אלינו בבקשה את המסמכים המפורטים\r\nבקישור הבא {{2}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100 ו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nעל מנת להגיש תביעת צד ג' יש להעביר אלינו בבקשה את המסמכים המפורטים\r\nבקישור הבא {{Link}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100 ו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:26.370Z",
+    "updatedAt": "2026-03-04T14:51:26.370Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ee7b74b4c7e52bff90",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_third_party_vehicle",
+    "friendlyName": "תביעות-טיפול צד ג רכב",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nעל מנת להגיש תביעה על נזק לרכב במסגרת תביעת צד ג' יש להעביר אלינו בבקשה את המסמכים המפורטים\r\nבקישור הבא {{2}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nעל מנת להגיש תביעה על נזק לרכב במסגרת תביעת צד ג' יש להעביר אלינו בבקשה את המסמכים המפורטים\r\nבקישור הבא {{Link}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:26.699Z",
+    "updatedAt": "2026-03-04T14:51:26.699Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ef7b74b4c7e52bff93",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_aminut_express_clal",
+    "friendlyName": "תביעות-אמינות אקספרס (כלל)",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינו באמצעות ספק שירות מטעם חברת הביטוח.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה וליצור קשר עם חברת \"אמינות אקספרס\" לתיאום בעל מקצוע בטלפון שמספרו 073-3853333.\r\n\r\nלצורך זיהוי הבניין ניתן למסור את מספר הפוליסה שלכם {{2}}.\r\nתשלום דמי השתתפות עצמית בגין אירוע ביטוחי הינו בהתאם לתנאי הפוליסה.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינו באמצעות ספק שירות מטעם חברת הביטוח.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה וליצור קשר עם חברת \"אמינות אקספרס\" לתיאום בעל מקצוע בטלפון שמספרו 073-3853333.\r\n\r\nלצורך זיהוי הבניין ניתן למסור את מספר הפוליסה שלכם {{PolicyNumber}}.\r\nתשלום דמי השתתפות עצמית בגין אירוע ביטוחי הינו בהתאם לתנאי הפוליסה.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "מספר פוליסה",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "PolicyNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר פוליסה",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:27.027Z",
+    "updatedAt": "2026-03-04T14:51:27.027Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ef7b74b4c7e52bff96",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_private_plumbing",
+    "friendlyName": "תביעות-איסטלציה פרטית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינה באמצעות שרברב עצמאי על-פי בחירתכם.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה ולהעביר למשרדנו את המסמכים הבאים שבקישור הבא: {{2}}\r\n\r\nלמען הסדר הטוב נוסיף ונציין כי הפעלת הפוליסה כרוכה בתשלום דמי השתתפות עצמית בגין אירוע ביטוחי בהתאם לתנאי הפוליסה.\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינה באמצעות שרברב עצמאי על-פי בחירתכם.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה ולהעביר למשרדנו את המסמכים הבאים שבקישור הבא: {{Link}}\r\n\r\nלמען הסדר הטוב נוסיף ונציין כי הפעלת הפוליסה כרוכה בתשלום דמי השתתפות עצמית בגין אירוע ביטוחי בהתאם לתנאי הפוליסה.\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:27.368Z",
+    "updatedAt": "2026-03-04T14:51:27.368Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ef7b74b4c7e52bff99",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_third_party_vehicle_gate",
+    "friendlyName": "תביעות-פגיעת רכב בשער מחסום צד ג",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{2}}\r\nמיום {{3}}.\r\n\r\nבמסגרת הליך ניהול תביעת צד ג' {{4}} ובחינת נסיבות האירוע, חברת הביטוח מבקשת לקבל את גרסת נציגות הבניין הכוללת מענה עבור השאלות שבקישור הבא:  {{5}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{6}}\r\n{{7}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{ClaimNumber}}\r\nמיום {{ClaimDamageDate}}.\r\n\r\nבמסגרת הליך ניהול תביעת צד ג' {{ClaimPlaintiffName}} ובחינת נסיבות האירוע, חברת הביטוח מבקשת לקבל את גרסת נציגות הבניין הכוללת מענה עבור השאלות שבקישור הבא:  {{Link}}\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "מספר תביעה",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך נזק",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם תובע",
+        "source": "manual"
+      },
+      "5": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "6": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "7": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "ClaimNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר תביעה",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "ClaimDamageDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך נזק",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "ClaimPlaintiffName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם תובע",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 5,
+        "hasDefault": false
+      },
+      {
+        "index": 6,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 7,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 7,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:27.721Z",
+    "updatedAt": "2026-03-04T14:51:27.721Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f07b74b4c7e52bff9c",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_building_tiles_or_sealing",
+    "friendlyName": "תביעות-נפילת אריחים ואיטום",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}}  שלום,\r\n\r\nאנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{2}}\r\nמיום {{3}}.\r\n\r\nבמסגרת הליך ניהול תביעת צד ג' {{4}} ובחינת נסיבות האירוע, חברת הביטוח מבקשת לקבל את גרסת נציגות הבניין הכוללת מענה עבור השאלות שבקישור הבא:  {{5}}\r\n\r\nאנא תשומת ליבכם כי יש חשיבות רבה לתקן את הליקוי ולהעביר אסמכתא על כך מכיוון שחברת הביטוח עלולה להחריג את הכיסוי הביטוחי למקרים הבאים.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{6}}\r\n{{7}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}}  שלום,\r\n\r\nאנו מבקשים להודיעך כי נפתחה תביעה בחברת הביטוח שמספרה {{ClaimNumber}}\r\nמיום {{ClaimDamageDate}}.\r\n\r\nבמסגרת הליך ניהול תביעת צד ג' {{ClaimPlaintiffName}} ובחינת נסיבות האירוע, חברת הביטוח מבקשת לקבל את גרסת נציגות הבניין הכוללת מענה עבור השאלות שבקישור הבא:  {{Link}}\r\n\r\nאנא תשומת ליבכם כי יש חשיבות רבה לתקן את הליקוי ולהעביר אסמכתא על כך מכיוון שחברת הביטוח עלולה להחריג את הכיסוי הביטוחי למקרים הבאים.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או בדוא\"ל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "מספר תביעה",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך נזק",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם תובע",
+        "source": "manual"
+      },
+      "5": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "6": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "7": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "ClaimNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר תביעה",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "ClaimDamageDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך נזק",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "ClaimPlaintiffName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם תובע",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 5,
+        "hasDefault": false
+      },
+      {
+        "index": 6,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 7,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 7,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df82",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:28.060Z",
+    "updatedAt": "2026-03-04T14:51:28.060Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f07b74b4c7e52bff9f",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_aminut_express_phnx",
+    "friendlyName": "תביעות-אמינות אקספרס (פניקס)",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינו באמצעות ספק שירות מטעם חברת הביטוח.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה וליצור קשר עם חברת \"אמינות אקספרס\" לתיאום בעל מקצוע בטלפון שמספרו 073-2076110.\r\n\r\nלצורך זיהוי הבניין ניתן למסור את מספר הפוליסה שלכם {{2}}.\r\nתשלום דמי השתתפות עצמית בגין אירוע ביטוחי הינו בהתאם לתנאי הפוליסה.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או במייל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{3}}\r\n{{4}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיבלנו בתודה את פנייתך.\r\n\r\nתיקון נזקי צנרת במסגרת פוליסת הבניין הינו באמצעות ספק שירות מטעם חברת הביטוח.\r\nבמידה והנכם חושדים שיש נזילה מהצנרת/מתקני האינסטלציה וההסקה של הבית המשותף, ניתן להפעיל את הפוליסה וליצור קשר עם חברת \"אמינות אקספרס\" לתיאום בעל מקצוע בטלפון שמספרו 073-2076110.\r\n\r\nלצורך זיהוי הבניין ניתן למסור את מספר הפוליסה שלכם {{PolicyNumber}}.\r\nתשלום דמי השתתפות עצמית בגין אירוע ביטוחי הינו בהתאם לתנאי הפוליסה.\r\n\r\nצוות התביעות של הסוכנות עומד לרשותכם לכל שאלה/בקשה גם בטלפון 03-5020100\r\nו/או במייל שכתובתו tviot@baroz.co.il\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "מספר פוליסה",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "PolicyNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר פוליסה",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:28.401Z",
+    "updatedAt": "2026-03-04T14:51:28.401Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f07b74b4c7e52bffa2",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_sales_no_answer",
+    "friendlyName": "מכירות-אין מענה-מתי אפשר לשוחח?",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nסיכמנו לשוחח היום בנוגע לביטוח הבניין\r\nאך לא היה מענה.\r\nמתי אפשר לשוחח איתך?\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nסיכמנו לשוחח היום בנוגע לביטוח הבניין\r\nאך לא היה מענה.\r\nמתי אפשר לשוחח איתך?\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserPhone}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:28.742Z",
+    "updatedAt": "2026-03-04T14:51:28.742Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f17b74b4c7e52bffa5",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_sales_no_answer_v2",
+    "friendlyName": "מכירות-אין מענה-אנסה מאוחר יותר",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nסיכמנו לשוחח היום בנוגע לביטוח הבניין\r\nאך לא היה מענה.\r\nאנסה אותך מאוחר יותר.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nסיכמנו לשוחח היום בנוגע לביטוח הבניין\r\nאך לא היה מענה.\r\nאנסה אותך מאוחר יותר.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserPhone}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:29.065Z",
+    "updatedAt": "2026-03-04T14:51:29.065Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f17b74b4c7e52bffa8",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_sales_no_answer_v3",
+    "friendlyName": "מכירות-אין מענה-הצעת מחיר",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nשלחתי לך הצעת מחיר עבור ביטוח הבניין.\r\nניסיתי להשיגך מס' פעמים אך לא היה מענה.\r\nמתי אפשר לשוחח?\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nשלחתי לך הצעת מחיר עבור ביטוח הבניין.\r\nניסיתי להשיגך מס' פעמים אך לא היה מענה.\r\nמתי אפשר לשוחח?\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserPhone}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:29.387Z",
+    "updatedAt": "2026-03-04T14:51:29.387Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f17b74b4c7e52bffab",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batm_sales_policy_send_reminder",
+    "friendlyName": "מכירות-תזכורת שליחת העתק פוליסה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nתזכורת לשלוח לי את העתק הפוליסה בהקדם\r\nלצורך השוואת הכיסויים והעלויות.\r\nאודה לשיתוף פעולה.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nתזכורת לשלוח לי את העתק הפוליסה בהקדם\r\nלצורך השוואת הכיסויים והעלויות.\r\nאודה לשיתוף פעולה.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserPhone}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:29.710Z",
+    "updatedAt": "2026-03-04T14:51:29.710Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f27b74b4c7e52bffae",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_sales_current_committee_members",
+    "friendlyName": "מכירות-פרטי חברי הועד הנוכחי",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו אשמח לקבל את הפרטים של חברי הוועד הנוכחי.\r\nאודה לעזרתך בנושא.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו אשמח לקבל את הפרטים של חברי הוועד הנוכחי.\r\nאודה לעזרתך בנושא.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserPhone}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:30.032Z",
+    "updatedAt": "2026-03-04T14:51:30.032Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f27b74b4c7e52bffb1",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_lead",
+    "friendlyName": "מכירות-ליד חדש",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "שלום,\r\n\r\nליד מספר: {{1}}\r\n\r\nהוקם עבור לקוח: {{2}}\r\nכתובת: {{3}}\r\n\r\nאיש קשר: {{4}}\r\nטלפון: {{5}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "שלום,\r\n\r\nליד מספר: {{DynamicField1}}\r\n\r\nהוקם עבור לקוח: {{CustomerNumber}}\r\nכתובת: {{CustomerAddress}}\r\n\r\nאיש קשר: {{ContactPersonName}}\r\nטלפון: {{CustomerPhone}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "2": {
+        "label": "מספר לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "5": {
+        "label": "טלפון לקוח",
+        "source": "customer.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 1,
+        "hasDefault": false
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerNumber",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מספר לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 5,
+        "fieldName": "CustomerPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון לקוח",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:30.354Z",
+    "updatedAt": "2026-03-04T14:51:30.354Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f27b74b4c7e52bffb4",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_absence_report",
+    "friendlyName": "מכירות-דוח היעדר תביעות: 3 שנים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקש לשלוח בהקדם דוח העדר תביעות, 3 שנים האחרונות.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקש לשלוח בהקדם דוח העדר תביעות, 3 שנים האחרונות.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:30.680Z",
+    "updatedAt": "2026-03-04T14:51:30.680Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f37b74b4c7e52bffb7",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_joining_forms",
+    "friendlyName": "מכירות-טפסי הצטרפות",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nתזכורת לשלוח את הטפסים חתומים לצורך הצטרפות לביטוח.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nתזכורת לשלוח את הטפסים חתומים לצורך הצטרפות לביטוח.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:31.003Z",
+    "updatedAt": "2026-03-04T14:51:31.003Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f37b74b4c7e52bffba",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_acceptance_certificates",
+    "friendlyName": "מכירות-בקשת קבלת מסמכים בניין מעל 70",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\n בהמשך לשיחתנו,\r\nע\"מ לבחון את הקבלה לביטוח - נא לשלוח את המסמכים הבאים:\r\n\r\n1. אישור מהנדס קונסטרקטור על יציבות הבניין, תקינות המעטפת החיצונית ותקינות האיטום.\r\n2. אישור חשמלאי מוסמך על תקינות מערכות החשמל בבניין.\r\n3. אם יש גז משותף של הבניין אז אישור בודק גז.\r\n4. אם יש עצים ברכוש המשותף אז אישור אגרונום.\r\n\r\n * אם היה ביטוח קודם ב-3 שנים אחרונות נא לשלוח דוח היעדר תביעות 3 שנים אחרונות.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\n בהמשך לשיחתנו,\r\nע\"מ לבחון את הקבלה לביטוח - נא לשלוח את המסמכים הבאים:\r\n\r\n1. אישור מהנדס קונסטרקטור על יציבות הבניין, תקינות המעטפת החיצונית ותקינות האיטום.\r\n2. אישור חשמלאי מוסמך על תקינות מערכות החשמל בבניין.\r\n3. אם יש גז משותף של הבניין אז אישור בודק גז.\r\n4. אם יש עצים ברכוש המשותף אז אישור אגרונום.\r\n\r\n * אם היה ביטוח קודם ב-3 שנים אחרונות נא לשלוח דוח היעדר תביעות 3 שנים אחרונות.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:31.327Z",
+    "updatedAt": "2026-03-04T14:51:31.327Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f37b74b4c7e52bffbd",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_claims_absence_report_5_years",
+    "friendlyName": "מכירות-דוח היעדר תביעות: 5 שנים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקש לשלוח בהקדם דוח העדר תביעות, 5 שנים האחרונות.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקש לשלוח בהקדם דוח העדר תביעות, 5 שנים האחרונות.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a425e095b33b456241e9ca",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:31.662Z",
+    "updatedAt": "2026-03-04T14:51:31.662Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f37b74b4c7e52bffc0",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_collection_debt",
+    "friendlyName": "גבייה-יתרת חוב",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} הופקה מתאריך {{3}}.\r\n\r\nקיימת יתרת חוב לתשלום על סך {{4}}, נבקשך ליצור קשר עם משרדנו לצורך הסדרת תשלום החוב.\r\n\r\nבאם הסדרת את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\nבאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום: {{5}}\r\n\r\nבברכה,\r\n{{6}}\r\n{{7}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} הופקה מתאריך {{StartDate}}.\r\n\r\nקיימת יתרת חוב לתשלום על סך {{DebtAmount}}, נבקשך ליצור קשר עם משרדנו לצורך הסדרת תשלום החוב.\r\n\r\nבאם הסדרת את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\nבאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום: {{Link}}\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "5": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "6": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "7": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 5,
+        "hasDefault": false
+      },
+      {
+        "index": 6,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 7,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 7,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:31.989Z",
+    "updatedAt": "2026-03-04T14:51:31.989Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f47b74b4c7e52bffc3",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_bank_transfer_approval",
+    "friendlyName": "גבייה-אישור העברה בנקאית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nהאסמכתה על העברה בנקאית התקבלה ונשלחה למחלקת הגבייה בחברת הביטוח.\r\n\r\nתודה על שיתוף הפעולה והמשך יום נעים.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nהאסמכתה על העברה בנקאית התקבלה ונשלחה למחלקת הגבייה בחברת הביטוח.\r\n\r\nתודה על שיתוף הפעולה והמשך יום נעים.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:32.325Z",
+    "updatedAt": "2026-03-04T14:51:32.325Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f47b74b4c7e52bffc6",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_means_of_payment",
+    "friendlyName": "גבייה-אמצעי תשלום",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\n\r\nמצ\"ב אפשרויות לתשלום:\r\n{{2}}\r\n\r\nבברכה,\r\n{{3}}\r\nטלפון: {{4}}\r\nדוא\"ל: {{5}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\n\r\nמצ\"ב אפשרויות לתשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור",
+        "source": "manual"
+      },
+      "3": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "5": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 5,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:32.651Z",
+    "updatedAt": "2026-03-04T14:51:32.651Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f47b74b4c7e52bffc9",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_checks_not_accepted_yet",
+    "friendlyName": "גבייה-המחאות לא התקבלו",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nההמחאות עדין לא התקבלו במשרדנו.\r\nבקבלתם תשלח אליך הודעת אישור.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nההמחאות עדין לא התקבלו במשרדנו.\r\nבקבלתם תשלח אליך הודעת אישור.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:32.977Z",
+    "updatedAt": "2026-03-04T14:51:32.977Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f57b74b4c7e52bffcc",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_deductible_debt",
+    "friendlyName": "גבייה-חוב עבור השתתפות עצמית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nקיים חוב עבור תשלום השתתפות עצמית בסך {{2}} בעבור תביעה מתאריך: {{3}}.\r\nנא ליצור קשר עם משרדנו לצורך הסדרת תשלום החוב.\r\n\r\nניתן ליצור עמנו קשר למספר\r\n{{4}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nקיים חוב עבור תשלום השתתפות עצמית בסך {{DebtAmount}} בעבור תביעה מתאריך: {{ClaimDamageDate}}.\r\nנא ליצור קשר עם משרדנו לצורך הסדרת תשלום החוב.\r\n\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך נזק",
+        "source": "manual"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "ClaimDamageDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך נזק",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:33.299Z",
+    "updatedAt": "2026-03-04T14:51:33.299Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f57b74b4c7e52bffcf",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_mng_policies_with_debt",
+    "friendlyName": "גבייה - חברת ניהול רשימת פוליסות",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאודה לטיפולך בשליחת אמצעי תשלום ל {{2}} פוליסות שעדיין לא קיבלנו אמצעי תשלום בעבורן.\r\n\r\nמצ\"ב קישור: {{3}}\r\nלפרטי הפוליסות הכוללות כתובות וסכומי תשלום נדרשים.\r\n\r\nבברכה,\r\nעמיר בר-עוז\r\nדוא\"ל: amir@baroz.co.il\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאודה לטיפולך בשליחת אמצעי תשלום ל {{DynamicField1}} פוליסות שעדיין לא קיבלנו אמצעי תשלום בעבורן.\r\n\r\nמצ\"ב קישור: {{FormLink}}\r\nלפרטי הפוליסות הכוללות כתובות וסכומי תשלום נדרשים.\r\n\r\nבברכה,\r\nעמיר בר-עוז\r\nדוא\"ל: amir@baroz.co.il\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:33.626Z",
+    "updatedAt": "2026-03-04T14:51:33.626Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f57b74b4c7e52bffd2",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_debt_pay_by_checks",
+    "friendlyName": "גבייה - תשלום חוב ע\"י המחאות",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nנודה לך באם תשלח/י {{2}} עבור ביטוח הבית המשותף בכתובת: {{3}}.\r\nניתן לפרוס התשלום ב {{4}} המחאות שוות ורצופות (חודש אחרי חודש) לפקודת: {{5}}.\r\n\r\nכתובתנו למשלוח דואר:\r\nבר-עוז המרכז לביטוח בתים משותפים\r\nת.ד 338\r\nחולון 5810202\r\n\r\nמומלץ לשלוח המעטפה בדואר רשום או דואר 24.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nנודה לך באם תשלח/י {{Amount}} עבור ביטוח הבית המשותף בכתובת: {{CustomerAddress}}.\r\nניתן לפרוס התשלום ב {{DynamicField1}} המחאות שוות ורצופות (חודש אחרי חודש) לפקודת: {{InsCompanyName}}.\r\n\r\nכתובתנו למשלוח דואר:\r\nבר-עוז המרכז לביטוח בתים משותפים\r\nת.ד 338\r\nחולון 5810202\r\n\r\nמומלץ לשלוח המעטפה בדואר רשום או דואר 24.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "סכום",
+        "source": "manual"
+      },
+      "3": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "5": {
+        "label": "שם חברת ביטוח",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Amount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "InsCompanyName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם חברת ביטוח",
+        "order": 5,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:33.950Z",
+    "updatedAt": "2026-03-04T14:51:33.950Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f67b74b4c7e52bffd5",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_debt_pay_by_credit_card",
+    "friendlyName": "גבייה - תשלום חוב ע\"י כרטיס אשראי",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nנודה לך באם תשלם/י {{2}} עבור ביטוח הבית המשותף בכתובת: {{3}}.\r\nמצ\"ב קישור לתשלום מאובטח בכרטיס אשראי:\r\n{{4}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nנודה לך באם תשלם/י {{Amount}} עבור ביטוח הבית המשותף בכתובת: {{CustomerAddress}}.\r\nמצ\"ב קישור לתשלום מאובטח בכרטיס אשראי:\r\n{{FormLink}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "סכום",
+        "source": "manual"
+      },
+      "3": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "4": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Amount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 4,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:34.282Z",
+    "updatedAt": "2026-03-04T14:51:34.282Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f67b74b4c7e52bffd8",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_debt_pay_by_bank_transfer",
+    "friendlyName": "גבייה - תשלום חוב ע\"י העברה בנקאית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "{{1}} שלום,\r\n\r\nנודה לך באם תשלם/י {{2}} בהעברה בנקאית, עבור ביטוח הבית המשותף בכתובת : {{3}}.\r\n\r\nפרטי חשבון הבנק של {{4}}:\r\nבנק {{5}}\r\nסניף {{6}}\r\nחשבון {{7}}\r\n \r\nלאחר ביצוע התשלום חובה לשלוח אלינו אסמכתא לוואטסאפ או לדוא\"ל office@baroz.co.il\r\nעל מנת שנשלח לחברת הביטוח לנתב את התשלום לפוליסה של הבניין.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+        "example": {
+          "body_text": [
+            [
+              "שם איש קשר",
+              "סכום",
+              "כתובת לקוח",
+              "שם חברת ביטוח",
+              "DynamicFiedl1",
+              "DynamicFiedl2",
+              "DynamicFiedl3"
+            ]
+          ]
+        }
+      }
+    ],
+    "bodyText": "{{1}} שלום,\r\n\r\nנודה לך באם תשלם/י {{2}} בהעברה בנקאית, עבור ביטוח הבית המשותף בכתובת : {{3}}.\r\n\r\nפרטי חשבון הבנק של {{4}}:\r\nבנק {{5}}\r\nסניף {{6}}\r\nחשבון {{7}}\r\n \r\nלאחר ביצוע התשלום חובה לשלוח אלינו אסמכתא לוואטסאפ או לדוא\"ל office@baroz.co.il\r\nעל מנת שנשלח לחברת הביטוח לנתב את התשלום לפוליסה של הבניין.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nנודה לך באם תשלם/י {{Amount}} בהעברה בנקאית, עבור ביטוח הבית המשותף בכתובת : {{CustomerAddress}}.\r\n\r\nפרטי חשבון הבנק של {{InsCompanyName}}:\r\nבנק {{DynamicFiedl1}}\r\nסניף {{DynamicFiedl2}}\r\nחשבון {{DynamicFiedl3}}\r\n \r\nלאחר ביצוע התשלום חובה לשלוח אלינו אסמכתא לוואטסאפ או לדוא\"ל office@baroz.co.il\r\nעל מנת שנשלח לחברת הביטוח לנתב את התשלום לפוליסה של הבניין.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "סכום",
+        "source": "manual"
+      },
+      "3": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שם חברת ביטוח",
+        "source": "manual"
+      },
+      "5": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "6": {
+        "label": "שדה דינמי 2",
+        "source": "manual"
+      },
+      "7": {
+        "label": "שדה דינמי 3",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "options": null,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Amount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום",
+        "order": 2,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      },
+      {
+        "index": 3,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 3,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      },
+      {
+        "index": 4,
+        "fieldName": "InsCompanyName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם חברת ביטוח",
+        "order": 4,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      },
+      {
+        "index": 5,
+        "fieldName": "DynamicFiedl1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "DynamicFiedl1",
+        "order": 5,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      },
+      {
+        "index": 6,
+        "fieldName": "DynamicFiedl2",
+        "fieldType": "TEXT",
+        "friendlyLabel": "DynamicFiedl2",
+        "order": 6,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      },
+      {
+        "index": 7,
+        "fieldName": "DynamicFiedl3",
+        "fieldType": "TEXT",
+        "friendlyLabel": "DynamicFiedl3",
+        "order": 7,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:34.618Z",
+    "updatedAt": "2026-03-04T16:47:22.035Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f67b74b4c7e52bffdb",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_debt_pay_by_payment_order",
+    "friendlyName": "גבייה - תשלום חוב ע\"י הוראת קבע",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nנודה לך באם תקים/י הרשאה לחיוב חשבון בחשבון הבנק של הוועד\r\nעל מנת לשלם {{2}} עבור ביטוח הבית המשותף בכתובת: {{3}}.\r\n\r\nהוראות הקמת הרשאה לחיוב חשבון:\r\nנא להיכנס לאתר הבנק של הבניין\r\nולהקים הרשאה לחיוב חשבון עבור קוד מוסד {{4}}.\r\n\r\nנדרש להקים הרשאה ללא מגבלת סכום וללא מגבלת תאריך.\r\n\r\nלאחר הקמת הרשאה לחיוב חשבון חובה לשלוח אלינו אסמכתא או צילום מסך לוואטסאפ או למייל office@baroz.co.il\r\nעל מנת שנשלח לחברת הביטוח את פרטי החשבון של הבניין לצורך תחילת חיוב החשבון ב 9 לחודש הבא.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nנודה לך באם תקים/י הרשאה לחיוב חשבון בחשבון הבנק של הוועד\r\nעל מנת לשלם {{Amount}} עבור ביטוח הבית המשותף בכתובת: {{CustomerAddress}}.\r\n\r\nהוראות הקמת הרשאה לחיוב חשבון:\r\nנא להיכנס לאתר הבנק של הבניין\r\nולהקים הרשאה לחיוב חשבון עבור קוד מוסד {{DynamicField1}}.\r\n\r\nנדרש להקים הרשאה ללא מגבלת סכום וללא מגבלת תאריך.\r\n\r\nלאחר הקמת הרשאה לחיוב חשבון חובה לשלוח אלינו אסמכתא או צילום מסך לוואטסאפ או למייל office@baroz.co.il\r\nעל מנת שנשלח לחברת הביטוח את פרטי החשבון של הבניין לצורך תחילת חיוב החשבון ב 9 לחודש הבא.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח\r\nבתים משותפים",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "סכום",
+        "source": "manual"
+      },
+      "3": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "4": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Amount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 4,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df83",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:34.954Z",
+    "updatedAt": "2026-03-04T14:51:34.954Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f77b74b4c7e52bffde",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_mng_company_update",
+    "friendlyName": "חברת ניהול - עדכון",
+    "status": "APPROVED",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום רב,\r\nאנו מביאים לידיעתך כעת עדכון חשוב.\r\n\r\nנודה לך באם תאשר בהודעת וואטסאפ שקראת ההודעה.\r\n\r\nלנוחיותך להלן קישור: {{1}}\r\n\r\nאנו כאן כדי לענות על כל שאלה.\r\n\r\nבברכה,\r\nצוות חברות ניהול\r\nמייל: nt@baroz.co.il\r\nטלפון: 03-5020130",
+        "example": {
+          "body_text": [
+            [
+              "קישור"
+            ]
+          ]
+        }
+      }
+    ],
+    "bodyText": "שלום רב,\r\nאנו מביאים לידיעתך כעת עדכון חשוב.\r\n\r\nנודה לך באם תאשר בהודעת וואטסאפ שקראת ההודעה.\r\n\r\nלנוחיותך להלן קישור: {{1}}\r\n\r\nאנו כאן כדי לענות על כל שאלה.\r\n\r\nבברכה,\r\nצוות חברות ניהול\r\nמייל: nt@baroz.co.il\r\nטלפון: 03-5020130",
+    "rawBodyContent": "שלום רב,\r\nאנו מביאים לידיעתך כעת עדכון חשוב.\r\n\r\nנודה לך באם תאשר בהודעת וואטסאפ שקראת ההודעה.\r\n\r\nלנוחיותך להלן קישור: {{Link}}\r\n\r\nאנו כאן כדי לענות על כל שאלה.\r\n\r\nבברכה,\r\nצוות חברות ניהול\r\nמייל: nt@baroz.co.il\r\nטלפון: 03-5020130",
+    "metaTemplateId": "1421262172533977",
+    "variableMapping": {
+      "1": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 1,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df84",
+    "tagIds": [],
+    "lastSynced": "2026-03-05T01:32:28.819Z",
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:35.293Z",
+    "updatedAt": "2026-03-05T01:32:28.820Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f77b74b4c7e52bffe1",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_mng_company_send_docs",
+    "friendlyName": "חברת ניהול - שליחת מסמכים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nהאם ניתן לשלוח לך בווטסאפ מידע ומסמכים הקשורים לביטוח הבניין ב-{{2}}?\r\n\r\nתודה.\r\n\r\nבברכה,\r\nצוות חברות ניהול\r\nמייל: nt@baroz.co.il\r\nטלפון: 03-5020130",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nהאם ניתן לשלוח לך בווטסאפ מידע ומסמכים הקשורים לביטוח הבניין ב-{{CustomerAddress}}?\r\n\r\nתודה.\r\n\r\nבברכה,\r\nצוות חברות ניהול\r\nמייל: nt@baroz.co.il\r\nטלפון: 03-5020130",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df84",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:35.612Z",
+    "updatedAt": "2026-03-04T14:51:35.612Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f77b74b4c7e52bffe4",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_mng_company_service",
+    "friendlyName": "חברת ניהול - יצירת קשר לגבי הביטוח",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאני ממוקד השירות לחברות ניהול.\r\nאשמח אם נוכל לדבר לגבי ביטוח הבניין בכתובת\r\n{{2}}.\r\n\r\nמתי יהיה לך נוח?\r\n\r\nניתן גם להתקשר אלינו ישירות למספר\r\n03-5020130\r\n\r\nאו במענה להודעה זו\r\n\r\nבברכה,\r\nמחלקת חברות ניהול\r\nבר עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאני ממוקד השירות לחברות ניהול.\r\nאשמח אם נוכל לדבר לגבי ביטוח הבניין בכתובת\r\n{{CustomerAddress}}.\r\n\r\nמתי יהיה לך נוח?\r\n\r\nניתן גם להתקשר אלינו ישירות למספר\r\n03-5020130\r\n\r\nאו במענה להודעה זו\r\n\r\nבברכה,\r\nמחלקת חברות ניהול\r\nבר עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:35.933Z",
+    "updatedAt": "2026-03-04T14:51:35.933Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f87b74b4c7e52bffe7",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_mng_company_end_of_treatment",
+    "friendlyName": "חברת ניהול - אישור סיום ניהול הבניין",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nהאם עדיין מנהלים את הבניין בכתובת: {{2}}?\r\n\r\nבמידה ולא, אודה לעזרך בעדכון פרטי ועד הבית הנוכחי.\r\nנשמח לקבל: שם מלא, טלפון נייד, דוא\"ל (ככל שקיים).\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nהאם עדיין מנהלים את הבניין בכתובת: {{CustomerAddress}}?\r\n\r\nבמידה ולא, אודה לעזרך בעדכון פרטי ועד הבית הנוכחי.\r\nנשמח לקבל: שם מלא, טלפון נייד, דוא\"ל (ככל שקיים).\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:36.256Z",
+    "updatedAt": "2026-03-04T14:51:36.256Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f87b74b4c7e52bffea",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_no_answer",
+    "friendlyName": "כללי-אין מענה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nניסיתי להשיג אותך ולא היה מענה.\r\nניתן לחזור אליי בוואטסאפ למספר זה.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nניסיתי להשיג אותך ולא היה מענה.\r\nניתן לחזור אליי בוואטסאפ למספר זה.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:36.578Z",
+    "updatedAt": "2026-03-04T14:51:36.578Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f87b74b4c7e52bffed",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_thank_you",
+    "friendlyName": "כללי-תודה רבה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nתודה רבה והמשך יום טוב.\r\n\r\nבברכה,\r\n{{2}}\r\n{{3}}\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nתודה רבה והמשך יום טוב.\r\n\r\nבברכה,\r\n{{UserName}}\r\n{{UserEmail}}\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:36.900Z",
+    "updatedAt": "2026-03-04T14:51:36.900Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f97b74b4c7e52bfff0",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_information_sheet",
+    "friendlyName": "כללי-מידעון בר-עוז",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nמידעון בר-עוז: {{2}}\r\nקראו - {{3}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{CustomerName}} שלום,\r\n\r\nמידעון בר-עוז: {{Content}}\r\nקראו - {{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם לקוח",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "תוכן",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "CustomerName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם לקוח",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "Content",
+        "fieldType": "TEXT",
+        "friendlyLabel": "תוכן",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:37.221Z",
+    "updatedAt": "2026-03-04T14:51:37.221Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f97b74b4c7e52bfff3",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_download_files",
+    "friendlyName": "כללי-הורדת טפסים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nמצ\"ב קישור להורדת טפסים.\r\n\r\n{{2}}\r\n\r\nנשמח לעמוד לשירותך בטלפון:  03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nמצ\"ב קישור להורדת טפסים.\r\n\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון:  03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:37.553Z",
+    "updatedAt": "2026-03-04T14:51:37.553Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846f97b74b4c7e52bfff6",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_download_files_v2",
+    "friendlyName": "כללי-הורדת טופס",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nמצ\"ב קישור להורדת טופס {{2}}.\r\n\r\n{{3}}\r\n\r\nנשמח לעמוד לשירותך בטלפון:  03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nמצ\"ב קישור להורדת טופס {{DynamicField1}}.\r\n\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון:  03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      },
+      "3": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 3,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:37.869Z",
+    "updatedAt": "2026-03-04T14:51:37.869Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fa7b74b4c7e52bfff9",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_subagent_lead_form",
+    "friendlyName": "כללי-טופס ליד לסוכני משנה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nלצורך שליחת פרטי ועד בית לעניין ביטוח הבית המשותף,\r\nמצורף קישור ליצירת ליד ע\"י סוכן:\r\n\r\n{{2}}\r\n\r\nלצורך זיהוי תישלח לך סיסמה חד פעמית ולאחר מכם תוכלו למלא את הפרטים ולשלוח.\r\nההפניה תקלט אצלנו כליד שלכם ותטופל.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nלצורך שליחת פרטי ועד בית לעניין ביטוח הבית המשותף,\r\nמצורף קישור ליצירת ליד ע\"י סוכן:\r\n\r\n{{FormLink}}\r\n\r\nלצורך זיהוי תישלח לך סיסמה חד פעמית ולאחר מכם תוכלו למלא את הפרטים ולשלוח.\r\nההפניה תקלט אצלנו כליד שלכם ותטופל.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:38.189Z",
+    "updatedAt": "2026-03-04T14:51:38.189Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fa7b74b4c7e52bfffc",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_reasonable_request",
+    "friendlyName": "כללי-בקשה סבירה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nנשמח לתת את שירותינו לוועדים נוספים.\r\n\r\nהאם יש ועד בית שהינכם מכירים שנוכל להציע לו את הביטוח?\r\nאם כן, נא שלחו אלינו את פרטיו:\r\nשם, מספר טלפון וכתובת.\r\n\r\nתודה על שיתוף הפעולה.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nנשמח לתת את שירותינו לוועדים נוספים.\r\n\r\nהאם יש ועד בית שהינכם מכירים שנוכל להציע לו את הביטוח?\r\nאם כן, נא שלחו אלינו את פרטיו:\r\nשם, מספר טלפון וכתובת.\r\n\r\nתודה על שיתוף הפעולה.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:38.524Z",
+    "updatedAt": "2026-03-04T14:51:38.524Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fa7b74b4c7e52bffff",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_building_images",
+    "friendlyName": "כללי-בקשת תמונות של הבניין",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nנא העבר אלינו תמונות ברורות של הבניין.\r\nניצור עמך קשר לאחר קבלתם.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nנא העבר אלינו תמונות ברורות של הבניין.\r\nניצור עמך קשר לאחר קבלתם.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:38.871Z",
+    "updatedAt": "2026-03-04T14:51:38.871Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fb7b74b4c7e52c0002",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_building_images_approval",
+    "friendlyName": "כללי-קבלת תמונות של הבניין",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nהתמונות התקבלו והועברו לחיתום,\r\nניצור עמך קשר לאחר התשובה.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nהתמונות התקבלו והועברו לחיתום,\r\nניצור עמך קשר לאחר התשובה.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:39.204Z",
+    "updatedAt": "2026-03-04T14:51:39.204Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fb7b74b4c7e52c0005",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_permission_for_whatsapp",
+    "friendlyName": "כללי-אישור לתקשר בווטסאפ",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nאנא אישורך לתקשר עימך ב-ווטסאפ.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nאנא אישורך לתקשר עימך ב-ווטסאפ.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:39.533Z",
+    "updatedAt": "2026-03-04T14:51:39.533Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fb7b74b4c7e52c0008",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_send_your_email",
+    "friendlyName": "כללי-שליחת כתובת הדוא\"ל",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקשך לשלוח את כתובת המייל שלך.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nאבקשך לשלוח את כתובת המייל שלך.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:39.846Z",
+    "updatedAt": "2026-03-04T14:51:39.846Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fc7b74b4c7e52c000b",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_courier_will_contact",
+    "friendlyName": "כללי-שליח יצור קשר",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nשליח מטעמנו יצור עמך קשר בהקדם האפשרי.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nשליח מטעמנו יצור עמך קשר בהקדם האפשרי.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:40.169Z",
+    "updatedAt": "2026-03-04T14:51:40.169Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fc7b74b4c7e52c000e",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_exclusion_form",
+    "friendlyName": "כללי-חתימה על טופס החרגה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו, \r\nיש לחתום על טופס ההחרגה המצורף.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו, \r\nיש לחתום על טופס ההחרגה המצורף.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:40.484Z",
+    "updatedAt": "2026-03-04T14:51:40.484Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fc7b74b4c7e52c0011",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_payment_confirmation",
+    "friendlyName": "כללי-בקשה לאישור תשלום",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nיש לשלוח את אישור התשלום עבור הביטוח.\r\n\r\nבברכה,\r\n{{2}}\r\nטלפון: {{3}}\r\nדוא\"ל: {{4}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nבהמשך לשיחתנו,\r\nיש לשלוח את אישור התשלום עבור הביטוח.\r\n\r\nבברכה,\r\n{{UserName}}\r\nטלפון: {{UserPhone}}\r\nדוא\"ל: {{UserEmail}}\r\n\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שם משתמש",
+        "source": "user.name"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "4": {
+        "label": "דואל משתמש",
+        "source": "user.email"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "UserName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם משתמש",
+        "order": 2,
+        "hasDefault": true,
+        "defaultValue": "USER_NAME"
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 4,
+        "fieldName": "UserEmail",
+        "fieldType": "TEXT",
+        "friendlyLabel": "דואל משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_EMAIL"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:40.826Z",
+    "updatedAt": "2026-03-04T14:51:40.826Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fd7b74b4c7e52c0014",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_expired_renewal_v2",
+    "friendlyName": "חידוש ביטוח מבנה שהסתיים (ללא סיסמא)",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nביטוח הבית המשותף בכתובת {{2}} הסתיים ב-{{3}} ולא חודש.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{4}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nביטוח הבית המשותף בכתובת {{CustomerAddress}} הסתיים ב-{{EndDate}} ולא חודש.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 4,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:41.149Z",
+    "updatedAt": "2026-03-04T14:51:41.149Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fd7b74b4c7e52c0017",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_renewal_no_password",
+    "friendlyName": "חידוש ביטוח מבנה שעומד להסתיים (ללא סיסמא)",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\nביטוח הבית המשותף בכתובת {{2}} יסתיים ב-{{3}}.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{4}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\nביטוח הבית המשותף בכתובת {{CustomerAddress}} יסתיים ב-{{EndDate}}.\r\n\r\nמצ\"ב קישור עבור חידוש הביטוח לשנה נוספת:\r\n{{FormLink}}\r\n\r\nנשמח לעמוד לשירותך בטלפון: 03-5020100.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "קישור לטופס",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "FormLink",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור לטופס",
+        "order": 4,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a419b6f3d448d583a09a68",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:41.474Z",
+    "updatedAt": "2026-03-04T14:51:41.474Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fd7b74b4c7e52c001a",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_renewal_alert",
+    "friendlyName": "חברת ניהול - התראת חידוש ביטוח",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nניסינו להשיגך לגבי חידוש ביטוח ועד הבית אך ללא הצלחה.\r\n\r\nפוליסה לביטוח בית משותף בכתובת {{2}} הסתיימה בתאריך {{3}}.\r\n\r\nטרם התקבל אישור חידוש לשנה נוספת.\r\n\r\nנא אישורכם לחדש ללא שינויים.\r\n\r\nניתן ליצור עמנו קשר בטלפון\r\n{{4}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nניסינו להשיגך לגבי חידוש ביטוח ועד הבית אך ללא הצלחה.\r\n\r\nפוליסה לביטוח בית משותף בכתובת {{CustomerAddress}} הסתיימה בתאריך {{EndDate}}.\r\n\r\nטרם התקבל אישור חידוש לשנה נוספת.\r\n\r\nנא אישורכם לחדש ללא שינויים.\r\n\r\nניתן ליצור עמנו קשר בטלפון\r\n{{UserPhone}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:41.812Z",
+    "updatedAt": "2026-03-04T14:51:41.812Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fe7b74b4c7e52c001d",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_non_renewal_alert",
+    "friendlyName": "חידושים - התראת אי חידוש ביטוח",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nלתשומת לבכם,\r\nביטוח הבית המשותף שלכם בכתובת {{2}}\r\nהסתיים בתאריך {{3}} בחצות ולא בוצע חידוש.\r\n\r\nלמען הסר ספק אין שום כיסוי ביטוחי לבניין, לדיירים ולוועד.\r\n\r\nלחידוש הביטוח ניתן להתקשר אלינו בכל עת למספר\r\n{{4}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nלתשומת לבכם,\r\nביטוח הבית המשותף שלכם בכתובת {{CustomerAddress}}\r\nהסתיים בתאריך {{EndDate}} בחצות ולא בוצע חידוש.\r\n\r\nלמען הסר ספק אין שום כיסוי ביטוחי לבניין, לדיירים ולוועד.\r\n\r\nלחידוש הביטוח ניתן להתקשר אלינו בכל עת למספר\r\n{{UserPhone}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך סיום",
+        "source": "manual"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "EndDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך סיום",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:42.141Z",
+    "updatedAt": "2026-03-04T14:51:42.141Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fe7b74b4c7e52c0020",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_missing_documents",
+    "friendlyName": "חידושים - מסמכים חסרים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nעל מנת לסיים את תהליך הפקת הפוליסה בכתובת {{2}}\r\n\r\nחסרים לנו מספר פרטים ומסמכים מהותיים.\r\n\r\nנודה על יצירת קשר עמנו בטלפון\r\n{{3}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nעל מנת לסיים את תהליך הפקת הפוליסה בכתובת {{CustomerAddress}}\r\n\r\nחסרים לנו מספר פרטים ומסמכים מהותיים.\r\n\r\nנודה על יצירת קשר עמנו בטלפון\r\n{{UserPhone}}\r\n\r\nאו במענה להודעה זו.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 3,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:42.470Z",
+    "updatedAt": "2026-03-04T14:51:42.470Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846fe7b74b4c7e52c0023",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_cancel_alert",
+    "friendlyName": "חידושים - התראת ביטול פוליסה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} מתאריך {{3}}\r\nצפויה להתבטל בימים הקרובים עקב אי תשלום.\r\n\r\nקיימת יתרת חוב לתשלום על סך {{4}}.\r\n\r\nנבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום החוב על מנת למנוע ביטול הפוליסה.\r\nניתן ליצור עמנו קשר למספר\r\n{{5}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{6}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} מתאריך {{StartDate}}\r\nצפויה להתבטל בימים הקרובים עקב אי תשלום.\r\n\r\nקיימת יתרת חוב לתשלום על סך {{DebtAmount}}.\r\n\r\nנבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום החוב על מנת למנוע ביטול הפוליסה.\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "5": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "6": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 5,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 6,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 6,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:42.795Z",
+    "updatedAt": "2026-03-04T14:51:42.795Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ff7b74b4c7e52c0026",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_canceled_alert",
+    "friendlyName": "חידושים - התראה על פוליסה מבוטלת",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} מתאריך {{3}}\r\n\r\nבוטלה בתאריך {{4}} עקב אי תשלום.\r\n\r\nעל מנת להשיבה לתוקף יש להסדיר תשלום על סך {{5}}.\r\n\r\nנבקשך ליצור קשר מיידי עם משרדנו לצורך הסדרת תשלום החוב בהקדם.\r\nניתן ליצור עמנו קשר למספר\r\n{{6}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{7}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} מתאריך {{StartDate}}\r\n\r\nבוטלה בתאריך {{CanceledDate}} עקב אי תשלום.\r\n\r\nעל מנת להשיבה לתוקף יש להסדיר תשלום על סך {{DebtAmount}}.\r\n\r\nנבקשך ליצור קשר מיידי עם משרדנו לצורך הסדרת תשלום החוב בהקדם.\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "תאריך ביטול",
+        "source": "manual"
+      },
+      "5": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "6": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "7": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "CanceledDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך ביטול",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 5,
+        "hasDefault": false
+      },
+      {
+        "index": 6,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 7,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 7,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:43.132Z",
+    "updatedAt": "2026-03-04T14:51:43.132Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ff7b74b4c7e52c0029",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_policy_canceled_legal_srv",
+    "friendlyName": "חידושים - התראה על תביעה משפטית",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} מתאריך {{3}}\r\n\r\nבוטלה בתאריך {{4}} עקב אי תשלום.\r\n\r\nקיימת יתרת חוב לאחר ביטול על סך {{5}}, הטיפול בחוב צפוי לעבור למחלקה המשפטית של חברת הביטוח בתוספת שכ\"ט עו\"ד, ריביות והצמדות.\r\n\r\nנבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום החוב בהקדם.\r\nניתן ליצור עמנו קשר למספר\r\n{{6}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{7}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} מתאריך {{StartDate}}\r\n\r\nבוטלה בתאריך {{CanceledDate}} עקב אי תשלום.\r\n\r\nקיימת יתרת חוב לאחר ביטול על סך {{DebtAmount}}, הטיפול בחוב צפוי לעבור למחלקה המשפטית של חברת הביטוח בתוספת שכ\"ט עו\"ד, ריביות והצמדות.\r\n\r\nנבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום החוב בהקדם.\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "תאריך ביטול",
+        "source": "manual"
+      },
+      "5": {
+        "label": "סכום חוב",
+        "source": "manual"
+      },
+      "6": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "7": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "CanceledDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך ביטול",
+        "order": 4,
+        "hasDefault": false
+      },
+      {
+        "index": 5,
+        "fieldName": "DebtAmount",
+        "fieldType": "NUMBER",
+        "friendlyLabel": "סכום חוב",
+        "order": 5,
+        "hasDefault": false
+      },
+      {
+        "index": 6,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 6,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 7,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 7,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:43.470Z",
+    "updatedAt": "2026-03-04T14:51:43.470Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a846ff7b74b4c7e52c002c",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_debit_authorization_alert",
+    "friendlyName": "חידושים - התראת הרשאת חיוב",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} מתאריך {{3}}\r\n\r\nשולמה בכרטיס אשראי או הרשאת חיוב.\r\n\r\nנא תשומת ליבך כי החיוב של חברת הביטוח לא כובד ע\"י הבנק/חברת האשראי.\r\n\r\nנוצרה יתרת חוב ונבקשך ליצור קשר עם משרדנו לצורך הסדרת תשלום.\r\nניתן ליצור עמנו קשר למספר\r\n{{4}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{5}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} מתאריך {{StartDate}}\r\n\r\nשולמה בכרטיס אשראי או הרשאת חיוב.\r\n\r\nנא תשומת ליבך כי החיוב של חברת הביטוח לא כובד ע\"י הבנק/חברת האשראי.\r\n\r\nנוצרה יתרת חוב ונבקשך ליצור קשר עם משרדנו לצורך הסדרת תשלום.\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "5": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 5,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 5,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:43.825Z",
+    "updatedAt": "2026-03-04T14:51:43.825Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847007b74b4c7e52c002f",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "batim_return_check_alert",
+    "friendlyName": "חידושים - התראת המחאה חוזרת",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "{{1}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{2}} מתאריך {{3}}\r\n\r\nשולמה בהמחאות.\r\n\r\nהרינו להודיעך כי אחת או יותר מההמחאות לא כובדו ע\"י הבנק.\r\n\r\nנוצרה יתרת חוב לתשלום ונבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום.\r\nניתן ליצור עמנו קשר למספר\r\n{{4}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{5}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "{{ContactPersonName}} שלום,\r\n\r\nפוליסת ביטוח הבית המשותף בכתובת {{CustomerAddress}} מתאריך {{StartDate}}\r\n\r\nשולמה בהמחאות.\r\n\r\nהרינו להודיעך כי אחת או יותר מההמחאות לא כובדו ע\"י הבנק.\r\n\r\nנוצרה יתרת חוב לתשלום ונבקשך ליצור קשר מידי עם משרדנו לצורך הסדרת תשלום.\r\nניתן ליצור עמנו קשר למספר\r\n{{UserPhone}}\r\n\r\nאם הסדרת כבר את התשלום, נודה לקבלת אסמכתא מתאימה בהודעה חוזרת.\r\n\r\nאם עדיין לא הסדרת את התשלום, מצ\"ב אפשרויות התשלום:\r\n{{Link}}\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "כתובת לקוח",
+        "source": "manual"
+      },
+      "3": {
+        "label": "תאריך התחלה",
+        "source": "manual"
+      },
+      "4": {
+        "label": "טלפון משתמש",
+        "source": "user.phone"
+      },
+      "5": {
+        "label": "קישור",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "CustomerAddress",
+        "fieldType": "TEXT",
+        "friendlyLabel": "כתובת לקוח",
+        "order": 2,
+        "hasDefault": false
+      },
+      {
+        "index": 3,
+        "fieldName": "StartDate",
+        "fieldType": "DATE",
+        "friendlyLabel": "תאריך התחלה",
+        "order": 3,
+        "hasDefault": false
+      },
+      {
+        "index": 4,
+        "fieldName": "UserPhone",
+        "fieldType": "TEXT",
+        "friendlyLabel": "טלפון משתמש",
+        "order": 4,
+        "hasDefault": true,
+        "defaultValue": "USER_PHONE"
+      },
+      {
+        "index": 5,
+        "fieldName": "Link",
+        "fieldType": "TEXT",
+        "friendlyLabel": "קישור",
+        "order": 5,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a8475f596c0d736c34df81",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:44.160Z",
+    "updatedAt": "2026-03-04T14:51:44.160Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847007b74b4c7e52c0032",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_products_info_confirmation",
+    "friendlyName": "אישור קבלת פרטים על מוצרים נלווים",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "שלום {{1}}\r\n\r\nבר-עוז מציעה ללקוחותיה מוצרים ושרותים נלווים לתפעול וניהול הבית המשותף.\r\n\r\nלקבלת פרטים נוספים ומימוש ההטבה יש לאשר את ההודעה.\r\n\r\nבלחיצה זו אני מאשר/ת לקבל פרטים על מוצרים נוספים שאינם מוצרי ביטוח.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "שלום {{ContactPersonName}}\r\n\r\nבר-עוז מציעה ללקוחותיה מוצרים ושרותים נלווים לתפעול וניהול הבית המשותף.\r\n\r\nלקבלת פרטים נוספים ומימוש ההטבה יש לאשר את ההודעה.\r\n\r\nבלחיצה זו אני מאשר/ת לקבל פרטים על מוצרים נוספים שאינם מוצרי ביטוח.\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:44.495Z",
+    "updatedAt": "2026-03-04T14:51:44.495Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847007b74b4c7e52c0035",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_products_info_ding",
+    "friendlyName": "כללי-קבלת מידע על מערכת דינג",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "שלום {{1}},\r\n\r\nכלקוח בר-עוז, מגיעה לך הטבה ייחודית על אפליקציית דינג - מערכת ניהול חכמה לוועד הבית, שתעשה סדר בכל הפעילות השוטפת: \r\n\r\nגביית תשלומים אוטומטית והנפקת אישורי תשלום\r\nניהול מסודר של קריאות שירות\r\nתקשורת עם הדיירים, בלי קבוצות וואטסאפ רועשות\r\n\r\nהטבה ללקוחות בר-עוז: הנחה של {{2}} על המערכת, לשנתיים.\r\n\r\nאתם מוזמנים להרשם למערכת דינג באתר: https://www.ding.co.il/\r\nבנוסף, מצורף קישור לחוברת הסבר על מערכת דינג: https://link.ding.co.il/ding4baroz\r\n\r\nיש לכם עדיין שאלות? \r\nצוות המכירות שלנו זמין עבורכם בוואטסאפ: https://wa.me/972515246200\r\n\r\n* הודעה זו נשלחת בהתאם להסכמתך לקבלת מידע על מוצרים ושרותים נלווים\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "שלום {{ContactPersonName}},\r\n\r\nכלקוח בר-עוז, מגיעה לך הטבה ייחודית על אפליקציית דינג - מערכת ניהול חכמה לוועד הבית, שתעשה סדר בכל הפעילות השוטפת: \r\n\r\nגביית תשלומים אוטומטית והנפקת אישורי תשלום\r\nניהול מסודר של קריאות שירות\r\nתקשורת עם הדיירים, בלי קבוצות וואטסאפ רועשות\r\n\r\nהטבה ללקוחות בר-עוז: הנחה של {{DynamicField1}} על המערכת, לשנתיים.\r\n\r\nאתם מוזמנים להרשם למערכת דינג באתר: https://www.ding.co.il/\r\nבנוסף, מצורף קישור לחוברת הסבר על מערכת דינג: https://link.ding.co.il/ding4baroz\r\n\r\nיש לכם עדיין שאלות? \r\nצוות המכירות שלנו זמין עבורכם בוואטסאפ: https://wa.me/972515246200\r\n\r\n* הודעה זו נשלחת בהתאם להסכמתך לקבלת מידע על מוצרים ושרותים נלווים\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variableMapping": {
+      "1": {
+        "label": "שם איש קשר",
+        "source": "customer.fullName"
+      },
+      "2": {
+        "label": "שדה דינמי 1",
+        "source": "manual"
+      }
+    },
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "ContactPersonName",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שם איש קשר",
+        "order": 1,
+        "hasDefault": true,
+        "defaultValue": "CUSTOMER_FULL_NAME"
+      },
+      {
+        "index": 2,
+        "fieldName": "DynamicField1",
+        "fieldType": "TEXT",
+        "friendlyLabel": "שדה דינמי 1",
+        "order": 2,
+        "hasDefault": false
+      }
+    ],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:44.829Z",
+    "updatedAt": "2026-03-04T14:51:44.829Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847017b74b4c7e52c0038",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_call_center_welcome",
+    "friendlyName": "כללי-ברוכים הבאים למרכזיה",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "ברוכים הבאים לערוץ הוואטסאפ \r\nשל בר-עוז המרכז לביטוח בתים משותפים\r\n\r\nעל מנת לקצר את זמן ההמתנה, נא לפרט את כתובת הבניין (עיר, רחוב, מספר בית)\r\nואת סיבת פנייתכם.",
+    "rawBodyContent": "ברוכים הבאים לערוץ הוואטסאפ \r\nשל בר-עוז המרכז לביטוח בתים משותפים\r\n\r\nעל מנת לקצר את זמן ההמתנה, נא לפרט את כתובת הבניין (עיר, רחוב, מספר בית)\r\nואת סיבת פנייתכם.",
+    "metaTemplateId": null,
+    "variables": [],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:45.166Z",
+    "updatedAt": "2026-03-04T14:51:45.166Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847017b74b4c7e52c003b",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_podcast_1_info",
+    "friendlyName": "בר-עוז פודקאסט 1 - 01.01.2026",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "פודקאסט חדש ברדיו תל אביב *קומת ביניים*\r\n\r\nרותם ישראל ועמיר בר־עוז, מנכ״ל ובעלים של בר־עוז – המרכז לביטוח בתים משותפים, נפגשים בפודקאסט ׳׳קומת ביניים׳׳.\r\nהפודקאסט שילמד אתכם כל מה שצריך לדעת על ניהול הבניין שלכם.\r\n• מהו בעצם ועד בית?\r\n• מה כוללת האחריות שלו, מהם האתגרים היומיומיים, למי התפקיד מתאים – ולמי פחות.\r\n• אילו המלצות וטיפים חשוב להכיר.\r\n\r\n*לינקים להאזנה לפרק*\r\n\r\nרדיו תל אביב\r\nhttps://www.102fm.co.il/komatb/318663\r\n\r\nספוטיפיי\r\nhttps://open.spotify.com/episode/4qxLfySBbY4deUKxnaCvQk?si=eA4qWd-RQQWGZCSehot5jg\r\n\r\nאפל פודקאסט \r\nhttps://podcasts.apple.com/il/podcast/%D7%9E%D7%94%D7%95-%D7%95%D7%A2%D7%93-%D7%91%D7%99%D7%AA/id1865408498?i=1000743387301&l=he\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "פודקאסט חדש ברדיו תל אביב *קומת ביניים*\r\n\r\nרותם ישראל ועמיר בר־עוז, מנכ״ל ובעלים של בר־עוז – המרכז לביטוח בתים משותפים, נפגשים בפודקאסט ׳׳קומת ביניים׳׳.\r\nהפודקאסט שילמד אתכם כל מה שצריך לדעת על ניהול הבניין שלכם.\r\n• מהו בעצם ועד בית?\r\n• מה כוללת האחריות שלו, מהם האתגרים היומיומיים, למי התפקיד מתאים – ולמי פחות.\r\n• אילו המלצות וטיפים חשוב להכיר.\r\n\r\n*לינקים להאזנה לפרק*\r\n\r\nרדיו תל אביב\r\nhttps://www.102fm.co.il/komatb/318663\r\n\r\nספוטיפיי\r\nhttps://open.spotify.com/episode/4qxLfySBbY4deUKxnaCvQk?si=eA4qWd-RQQWGZCSehot5jg\r\n\r\nאפל פודקאסט \r\nhttps://podcasts.apple.com/il/podcast/%D7%9E%D7%94%D7%95-%D7%95%D7%A2%D7%93-%D7%91%D7%99%D7%AA/id1865408498?i=1000743387301&l=he\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variables": [],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:45.482Z",
+    "updatedAt": "2026-03-04T14:51:45.482Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a847017b74b4c7e52c003e",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "baroz_podcast_2_info",
+    "friendlyName": "בר-עוז פודקאסט 2 - 22.01.2026",
+    "status": "DRAFT",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [],
+    "bodyText": "פרק חדש של קומת ביניים ברדיו תל אביב \r\n\r\n*והשבוע : העתיד של ניהול דיגיטלי בבנינים* \r\n\r\nרותם ישראל ועמיר בר עוז מארחים את יחזקאל עיני, סמנכ״ל שיווק ומכירות ב OXS Fintech \r\nלשיחה על הפלטפורמות הדיגיטליות לניהול בניינים:\r\n\r\n- כיצד הן מסייעות לוועד הבית ולדיירים\r\n- מה חשוב לבדוק לפני שבוחרים פלטפורמה\r\n- מה צפוי בתחום בעתיד\r\n\r\n*לינקים להאזנה לפרק*\r\n\r\nרדיו תל אביב\r\nhttps://www.102fm.co.il/komatb/318938\r\n\r\nספוטיפיי\r\nhttps://open.spotify.com/episode/0Vue8u7KdCb4SmXb3MSweO?si=9oyzokllRsKJwbxxPEY_pQ\r\n\r\nאפל פודקאסט \r\nhttps://podcasts.apple.com/il/podcast/%D7%94%D7%A2%D7%AA%D7%99%D7%93-%D7%A9%D7%9C-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99-%D7%91%D7%91%D7%A0%D7%99%D7%99%D7%A0%D7%99%D7%9D/id1865408498?i=1000746163503&l=he\r\n\r\nלהסרת הודעות מסוג זה השב: *הסר*\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "rawBodyContent": "פרק חדש של קומת ביניים ברדיו תל אביב \r\n\r\n*והשבוע : העתיד של ניהול דיגיטלי בבנינים* \r\n\r\nרותם ישראל ועמיר בר עוז מארחים את יחזקאל עיני, סמנכ״ל שיווק ומכירות ב OXS Fintech \r\nלשיחה על הפלטפורמות הדיגיטליות לניהול בניינים:\r\n\r\n- כיצד הן מסייעות לוועד הבית ולדיירים\r\n- מה חשוב לבדוק לפני שבוחרים פלטפורמה\r\n- מה צפוי בתחום בעתיד\r\n\r\n*לינקים להאזנה לפרק*\r\n\r\nרדיו תל אביב\r\nhttps://www.102fm.co.il/komatb/318938\r\n\r\nספוטיפיי\r\nhttps://open.spotify.com/episode/0Vue8u7KdCb4SmXb3MSweO?si=9oyzokllRsKJwbxxPEY_pQ\r\n\r\nאפל פודקאסט \r\nhttps://podcasts.apple.com/il/podcast/%D7%94%D7%A2%D7%AA%D7%99%D7%93-%D7%A9%D7%9C-%D7%A0%D7%99%D7%94%D7%95%D7%9C-%D7%93%D7%99%D7%92%D7%99%D7%98%D7%9C%D7%99-%D7%91%D7%91%D7%A0%D7%99%D7%99%D7%A0%D7%99%D7%9D/id1865408498?i=1000746163503&l=he\r\n\r\nלהסרת הודעות מסוג זה השב: *הסר*\r\n\r\nבברכה,\r\nבר-עוז המרכז לביטוח",
+    "metaTemplateId": null,
+    "variables": [],
+    "buttons": [],
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": null,
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T14:51:45.812Z",
+    "updatedAt": "2026-03-04T14:51:45.812Z",
+    "__v": 0,
+    "isActive": true
+  },
+  {
+    "_id": "69a86140784d1aa4598e4c80",
+    "tenantId": "69a3e8ca95ca70ee4c24372c",
+    "name": "hey",
+    "friendlyName": "פניה יזומה",
+    "status": "APPROVED",
+    "category": "MARKETING",
+    "language": "he",
+    "components": [
+      {
+        "type": "BODY",
+        "text": "שלום ,\n{{1}}\nתודה.",
+        "example": {
+          "body_text": [
+            [
+              "מלל חופשי"
+            ]
+          ]
+        }
+      }
+    ],
+    "bodyText": "שלום ,\n{{1}}\nתודה.",
+    "rawBodyContent": "שלום ,\n{{COMMENT}}\nתודה.",
+    "metaTemplateId": "1454648726114033",
+    "variables": [
+      {
+        "index": 1,
+        "fieldName": "COMMENT",
+        "fieldType": "TEXT",
+        "friendlyLabel": "מלל חופשי",
+        "order": 1,
+        "options": null,
+        "hasDefault": false,
+        "defaultValue": null
+      }
+    ],
+    "buttons": [],
+    "isActive": true,
+    "teamId": "69a84760596c0d736c34df85",
+    "tagIds": [],
+    "lastSynced": "2026-03-05T01:32:29.144Z",
+    "rejectedReason": null,
+    "createdAt": "2026-03-04T16:43:44.048Z",
+    "updatedAt": "2026-03-05T01:32:29.144Z",
+    "__v": 0
+  }
+]
