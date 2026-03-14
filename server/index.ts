@@ -183,6 +183,9 @@ app.use((req, res, next) => {
     const { startSnoozeWakeJob } = await import("./services/snooze-wake.service");
     startSnoozeWakeJob();
 
+    const { startLogProcessor } = await import("./jobs/log.processor");
+    startLogProcessor();
+
     const { startAlertSyncCron } = await import("./services/audit-alert.service");
     startAlertSyncCron();
 
