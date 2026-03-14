@@ -4,7 +4,7 @@ import { SystemAuditLogModel, type ISystemAuditLog, type IAuditStep } from "../m
 import { traceBuffer, type TraceData, MAX_BUFFER_SIZE } from "../lib/trace-buffer";
 import { encryptPayload, decryptPayload, maskPhone } from "../utils/encryption";
 import { getMessageModel } from "../models/message.model";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 export interface StartTraceParams {
   traceId?: string;

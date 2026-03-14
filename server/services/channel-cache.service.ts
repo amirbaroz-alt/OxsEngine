@@ -1,6 +1,6 @@
 import { ChannelModel } from "../models/channel.model";
 import { decryptChannelFields, normalizePhoneForMatch, type ChannelCredentials } from "./channel.service";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 export interface CachedChannelEntry {
   channelId: string;

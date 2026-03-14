@@ -1,4 +1,4 @@
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { TenantModel, type ITenant } from "../models/tenant.model";
 import { ChannelModel } from "../models/channel.model";
 import { getWhatsAppTemplateModel } from "../models/whatsapp-template.model";

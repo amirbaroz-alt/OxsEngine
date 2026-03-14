@@ -1,6 +1,6 @@
 import { Server as HttpServer } from "http";
 import { Server as SocketServer } from "socket.io";
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { markLocalEmit } from "./change-stream.service";
 import { authService } from "./auth.service";
 import { userService } from "./user.service";

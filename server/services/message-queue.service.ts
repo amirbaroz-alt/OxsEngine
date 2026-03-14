@@ -1,4 +1,4 @@
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 type JobStatus = "pending" | "processing" | "completed" | "failed";
 

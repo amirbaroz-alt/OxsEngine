@@ -1,4 +1,4 @@
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { getMessageModel } from "../models/message.model";
 import { TenantModel } from "../models/tenant.model";
 import { tenantDbManager } from "../lib/db-manager";

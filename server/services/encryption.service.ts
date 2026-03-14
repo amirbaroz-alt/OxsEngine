@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 const ALGORITHM = "aes-256-gcm";
 const IV_LENGTH = 16;

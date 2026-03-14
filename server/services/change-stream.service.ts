@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 const recentLocalEmits = new Set<string>();
 const LOCAL_EMIT_TTL = 10_000;

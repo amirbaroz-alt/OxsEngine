@@ -4,7 +4,7 @@ import { ChannelModel } from "../models/channel.model";
 import { getCustomerModel } from "../models/customer.model";
 import { decryptChannelFields } from "./channel.service";
 import axios from "axios";
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { emitTemplateUpdate } from "./socket.service";
 import { normalizeVariableMapping, type ResolvedVariable, type VariableDefinition, type TemplateVariable, type TemplateFieldType, type TemplateButton } from "@shared/schema";
 import { API_REQUEST_TIMEOUT_MS, TEMPLATE_SYNC_TIMEOUT_MS } from "../lib/constants/limits";

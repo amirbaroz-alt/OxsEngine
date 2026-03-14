@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 const STICKINESS_WINDOW_DAYS = 7;
 

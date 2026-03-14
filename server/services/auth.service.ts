@@ -3,7 +3,7 @@ import { UserModel, type IUser } from "../models/user.model";
 import { SessionModel } from "../models/session.model";
 import { smsService } from "./sms.service";
 import { emailService } from "./email.service";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 const ADMIN_SESSION_HOURS = 8;
 const USER_SESSION_HOURS = 24;

@@ -1,4 +1,4 @@
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { communicationLogService } from "./communication-log.service";
 import type { ICommunicationLog } from "../models/communication-log.model";
 import { TenantModel } from "../models/tenant.model";

@@ -1,4 +1,4 @@
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { ChannelModel } from "../models/channel.model";
 import { TenantModel } from "../models/tenant.model";
 import { getChannelToken, getDefaultWhatsAppChannel, flagChannelTokenExpired, clearChannelTokenExpired, type ChannelCredentials } from "./channel.service";

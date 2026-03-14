@@ -6,6 +6,7 @@ import { registerWhatsappRoutes } from "./routes/whatsapp";
 import { registerAdminRoutes } from "./routes/admin";
 import { registerTenantRoutes } from "./routes/tenants";
 import { registerInboxRoutes } from "./routes/inbox";
+import { registerApiGatewayRoutes } from "./routes/api-gateway";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -20,6 +21,7 @@ export async function registerRoutes(
       "/api/whatsapp/webhook",
       "/api/translations/merged/",
       "/api/webhook/stats",
+      "/api/v1/",         // API Gateway
     ];
     if (publicPrefixes.some((p) => fullPath.startsWith(p))) {
       return next();
@@ -32,6 +34,7 @@ export async function registerRoutes(
   registerAdminRoutes(app);
   registerTenantRoutes(app);
   registerInboxRoutes(app);
+  registerApiGatewayRoutes(app);
 
   return httpServer;
 }

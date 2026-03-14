@@ -1,6 +1,6 @@
 import { ChannelModel, type IChannel, type ChannelType } from "../models/channel.model";
 import { encryptionService } from "./encryption.service";
-import { log } from "../index";
+import { log } from "../lib/logger";
 import { API_REQUEST_TIMEOUT_MS } from "../lib/constants/limits";
 
 const CHANNEL_SENSITIVE_FIELDS = ["accessToken", "verifyToken", "sendGridKey", "appSecret"];

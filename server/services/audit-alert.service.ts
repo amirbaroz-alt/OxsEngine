@@ -1,7 +1,7 @@
 import { AuditAlertConfigModel } from "../models/AuditAlertConfig";
 import { emailService } from "./email.service";
 import { smsService } from "./sms.service";
-import { log } from "../index";
+import { log } from "../lib/logger";
 
 const DAILY_SYNC_HOUR = 4;
 
