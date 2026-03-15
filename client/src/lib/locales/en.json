@@ -1409,7 +1409,8 @@
       "errorNetwork": "Network error",
       "errorSaveFailed": "Save failed",
       "errorLoadFailed": "Failed to load tenants",
-      "validationRequired": "nameHe, nameEn and slug are required"
+      "validationRequired": "nameHe, nameEn and slug are required",
+      "slugWarning": "Changing the slug will break the login URL for all users of this tenant"
     }
   },
   "impersonation": {

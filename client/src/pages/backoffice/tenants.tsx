@@ -304,7 +304,12 @@ export default function BackofficeTenantsPage() {
                 <Input value={v.nameEn} onChange={(e) => set("nameEn", e.target.value)} />
               </Field>
               <Field label={t("backoffice.tenants.fieldSlug")}>
-                <Input value={v.slug} onChange={(e) => set("slug", e.target.value.toLowerCase())} placeholder="acme" disabled={!!editingId} />
+                <Input value={v.slug} onChange={(e) => set("slug", e.target.value.toLowerCase())} placeholder="acme" />
+                {editingId && (
+                  <p className="text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded px-2 py-1 mt-1">
+                    ⚠ {t("backoffice.tenants.slugWarning")}
+                  </p>
+                )}
               </Field>
               <Field label={t("backoffice.tenants.fieldDefaultLang")}>
                 <Select value={v.defaultLanguage} onValueChange={(val) => set("defaultLanguage", val)}>

@@ -1355,7 +1355,7 @@
       "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
       "fieldEnableProxy": "Proxy'yi Etkinleştir", "errorSlugTaken": "Slug zaten kullanımda",
       "errorNetwork": "Ağ hatası", "errorSaveFailed": "Kaydetme başarısız",
-      "errorLoadFailed": "Şirketler yüklenemedi", "validationRequired": "nameHe, nameEn ve slug zorunludur"
+      "errorLoadFailed": "Şirketler yüklenemedi", "validationRequired": "nameHe, nameEn ve slug zorunludur", "slugWarning": "Slug'ı değiştirmek bu şirketin tüm kullanıcılarının giriş bağlantısını bozacak"
     }
   },
   "impersonation": {

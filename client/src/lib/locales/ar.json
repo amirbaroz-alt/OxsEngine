@@ -1658,7 +1658,7 @@
       "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
       "fieldEnableProxy": "تفعيل البروكسي", "errorSlugTaken": "Slug مستخدم بالفعل",
       "errorNetwork": "خطأ في الشبكة", "errorSaveFailed": "فشل الحفظ",
-      "errorLoadFailed": "فشل تحميل الشركات", "validationRequired": "nameHe وnameEn وslug مطلوبة"
+      "errorLoadFailed": "فشل تحميل الشركات", "validationRequired": "nameHe وnameEn وslug مطلوبة", "slugWarning": "تغيير الـ Slug سيكسر رابط تسجيل الدخول لجميع مستخدمي هذه الشركة"
     }
   },
   "impersonation": {

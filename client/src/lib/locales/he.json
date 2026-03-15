@@ -1735,7 +1735,8 @@
       "errorNetwork": "שגיאת רשת",
       "errorSaveFailed": "שמירה נכשלה",
       "errorLoadFailed": "טעינת חברות נכשלה",
-      "validationRequired": "nameHe, nameEn ו-slug הם שדות חובה"
+      "validationRequired": "nameHe, nameEn ו-slug הם שדות חובה",
+      "slugWarning": "שינוי ה-Slug ישבור את כתובת הכניסה של כל משתמשי החברה הזו"
     }
   },
   "impersonation": {

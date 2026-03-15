@@ -1658,7 +1658,7 @@
       "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
       "fieldEnableProxy": "Включить прокси", "errorSlugTaken": "Slug уже занят",
       "errorNetwork": "Ошибка сети", "errorSaveFailed": "Ошибка сохранения",
-      "errorLoadFailed": "Ошибка загрузки компаний", "validationRequired": "nameHe, nameEn и slug обязательны"
+      "errorLoadFailed": "Ошибка загрузки компаний", "validationRequired": "nameHe, nameEn и slug обязательны", "slugWarning": "Изменение Slug сломает ссылку входа для всех пользователей этой компании"
     }
   },
   "impersonation": {
