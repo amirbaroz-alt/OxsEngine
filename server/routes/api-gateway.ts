@@ -687,7 +687,27 @@ export function registerApiGatewayRoutes(app: Express) {
       }
       const payload = jwtService.decode(otc.token);
       if (!payload) return res.status(500).json({ success: false, error: "TOKEN_DECODE_ERROR" });
-      res.json({ success: true, token: otc.token, user: payload });
+
+      // Create a real session so the main app's /api/auth/me (session-based) works
+      const { authService } = await import("../services/auth.service");
+      const { UserModel } = await import("../models/user.model");
+      const user = await UserModel.findById(payload.sub).lean();
+      if (!user || !(user as any).active) {
+        return res.status(403).json({ success: false, error: "USER_INACTIVE_OR_NOT_FOUND" });
+      }
+      const sessionToken = await authService.createSession(String((user as any)._id), false);
+      res.json({
+        success: true,
+        token: sessionToken,
+        user: {
+          _id: (user as any)._id,
+          name: (user as any).name,
+          email: (user as any).email,
+          phone: (user as any).phone,
+          role: (user as any).role,
+          tenantId: (user as any).tenantId,
+        },
+      });
     } catch (err: any) {
       res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
     }

@@ -129,7 +129,9 @@ export default function BackofficeUsersPage() {
         alert(data.error || t("backoffice.users.impersonateFailed"));
         return;
       }
-      const win = window.open(`/?otc=${data.code}`, "_blank");
+      const slug = user.tenant?.slug;
+      const path = slug ? `/login/${slug}?otc=${data.code}` : `/?otc=${data.code}`;
+      const win = window.open(path, "_blank");
       if (!win) alert("הדפדפן חסם את החלון החדש. אנא אפשר חלונות קופצים עבור אתר זה ונסה שוב.");
     } catch {
       alert(t("backoffice.users.errorNetwork"));

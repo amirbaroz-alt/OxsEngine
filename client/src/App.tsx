@@ -281,7 +281,7 @@ function AuthenticatedApp() {
 
 function AppContent() {
   const { i18n } = useTranslation();
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
   const { isAuthenticated, isLoading, login } = useAuth();
   // Initialize as true synchronously if OTC code is in URL — prevents race condition
   // where isLoading=false + isAuthenticated=false fires before the OTC useEffect sets otcLoading=true
@@ -319,14 +319,16 @@ function AppContent() {
       .then((r) => r.json())
       .then((data) => {
         if (data.success) {
-          // JWT payload uses `sub` for userId; map to AuthUser shape expected by main app
+          // exchange-otc now returns a real session token + full user object
           const u = data.user;
           login(data.token, {
-            _id: u.sub ?? u._id,
+            _id: u._id ?? u.sub,
             name: u.name ?? "",
             role: u.role,
             tenantId: u.tenantId,
           });
+          // Navigate to main app root (away from /login/:slug if that's where OTC was exchanged)
+          setLocation("/");
         } else {
           setOtcError(data.error || "INVALID_OR_EXPIRED_CODE");
         }

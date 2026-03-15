@@ -51,6 +51,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Skip token validation if an OTC code is in the URL — the OTC exchange will handle auth
+    const hasOtc = !!new URLSearchParams(window.location.search).get("otc");
+    if (hasOtc) {
+      setIsLoading(false);
+      return;
+    }
     if (token) {
       validateToken();
     } else {
