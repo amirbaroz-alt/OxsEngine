@@ -619,6 +619,7 @@ export function registerApiGatewayRoutes(app: Express) {
       const target = await UserModel.findById(req.params.userId)
         .select("name email role tenantId active").lean();
       if (!target) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
+      if ((target as any).role === "superadmin") return res.status(403).json({ success: false, error: "CANNOT_IMPERSONATE_SUPERADMIN" });
       if (!(target as any).active) return res.status(400).json({ success: false, error: "USER_INACTIVE" });
 
       const impersonatorId = req.jwtPayload!.sub;
@@ -670,6 +671,10 @@ export function registerApiGatewayRoutes(app: Express) {
       const { OTCModel } = await import("../models/otc.model");
       const otc = await OTCModel.findOneAndDelete({ code });
       if (!otc) return res.status(401).json({ success: false, error: "INVALID_OR_EXPIRED_CODE" });
+      // Application-level expiry check (MongoDB TTL runs every ~60s, not every second)
+      if (Date.now() - otc.createdAt.getTime() > 30_000) {
+        return res.status(401).json({ success: false, error: "INVALID_OR_EXPIRED_CODE" });
+      }
       const payload = jwtService.decode(otc.token);
       res.json({ success: true, token: otc.token, user: payload });
     } catch (err: any) {
