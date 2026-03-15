@@ -613,6 +613,11 @@ export function registerApiGatewayRoutes(app: Express) {
    */
   app.post("/api/v1/admin/impersonate/:userId", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
     try {
+      // Rate limit: 10 impersonations per superadmin per minute
+      const impersonatorSub = req.jwtPayload!.sub;
+      if (!rl(`impersonate:${impersonatorSub}`, 10, 60_000)) {
+        return res.status(429).json({ success: false, error: "TOO_MANY_REQUESTS" });
+      }
       const { UserModel } = await import("../models/user.model");
       const { OTCModel } = await import("../models/otc.model");
 
