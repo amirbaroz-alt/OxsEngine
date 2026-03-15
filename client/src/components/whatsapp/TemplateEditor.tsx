@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Switch } from "@/components/ui/switch";
+import { ToggleBadge } from "@/components/ui/toggle-badge";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Plus, Trash2, ArrowLeft, ArrowRight, Phone, Link, Reply, ChevronDown } from "lucide-react";
 import type { TemplateVariable, TemplateFieldType, TemplateButton, TemplateButtonType } from "@shared/schema";
@@ -187,14 +187,12 @@ export function TemplateEditor({
                     </div>
                   )}
                   <div className="flex items-end gap-2 pb-1">
-                    <Switch
+                    <ToggleBadge
                       checked={form.isActive}
                       onCheckedChange={(checked) => setForm((prev) => ({ ...prev, isActive: checked }))}
+                      labels={{ on: t("waTemplates.active"), off: t("waTemplates.inactive") }}
                       data-testid="switch-template-active"
                     />
-                    <Label className="text-sm cursor-pointer" onClick={() => setForm((prev) => ({ ...prev, isActive: !prev.isActive }))}>
-                      {form.isActive ? t("waTemplates.active") : t("waTemplates.inactive")}
-                    </Label>
                   </div>
                 </div>
 
@@ -262,12 +260,12 @@ export function TemplateEditor({
                         )}
                         <div className="flex items-center gap-3">
                           <div className="flex items-center gap-2">
-                            <Switch
+                            <ToggleBadge
                               checked={v.hasDefault}
                               onCheckedChange={(checked) => updateVariable(idx, { hasDefault: checked, defaultValue: checked ? "" : undefined })}
+                              labels={{ on: t("waTemplates.hasDefault"), off: t("waTemplates.hasDefault") }}
                               data-testid={`switch-has-default-${idx}`}
                             />
-                            <Label className="text-xs">{t("waTemplates.hasDefault")}</Label>
                           </div>
                           {v.hasDefault && (
                             <div className="flex-1">
@@ -378,14 +376,12 @@ export function TemplateEditor({
                             className={`h-7 text-xs flex-1 ${!(btn.url || "").trim() ? "border-destructive" : ""}`}
                             data-testid={`input-button-url-${idx}`}
                           />
-                          <div className="flex items-center gap-1.5">
-                            <Switch
-                              checked={btn.urlDynamic || false}
-                              onCheckedChange={(checked) => updateButton(idx, { urlDynamic: checked })}
-                              data-testid={`switch-url-dynamic-${idx}`}
-                            />
-                            <Label className="text-xs whitespace-nowrap">{t("waTemplates.dynamicUrl", "Dynamic")}</Label>
-                          </div>
+                          <ToggleBadge
+                            checked={btn.urlDynamic || false}
+                            onCheckedChange={(checked) => updateButton(idx, { urlDynamic: checked })}
+                            labels={{ on: t("waTemplates.dynamicUrl", "Dynamic"), off: t("waTemplates.dynamicUrl", "Dynamic") }}
+                            data-testid={`switch-url-dynamic-${idx}`}
+                          />
                         </div>
                       )}
                       {btn.type === "PHONE_NUMBER" && (

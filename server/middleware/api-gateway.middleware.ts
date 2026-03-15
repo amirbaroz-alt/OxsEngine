@@ -1,12 +1,19 @@
 import { Request, Response, NextFunction } from "express";
 import { jwtService, type JwtPayload } from "../services/jwt.service";
+import { generateCorrelationId } from "../lib/log.adapter";
 
 declare global {
   namespace Express {
     interface Request {
       jwtPayload?: JwtPayload;
+      correlationId: string;
     }
   }
+}
+
+export function attachCorrelationId(req: Request, _res: Response, next: NextFunction) {
+  req.correlationId = (req.headers["x-correlation-id"] as string) || generateCorrelationId();
+  next();
 }
 
 export function requireJwt(req: Request, res: Response, next: NextFunction) {

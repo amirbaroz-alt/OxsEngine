@@ -7,7 +7,9 @@ import {
   requireJwt,
   requireJwtRole,
   requireJwtTenant,
+  attachCorrelationId,
 } from "../middleware/api-gateway.middleware";
+import { logAdapter } from "../lib/log.adapter";
 import { log } from "../index";
 
 const TAG = "api-gateway";
@@ -43,6 +45,9 @@ function rl(key: string, max: number, windowMs: number): boolean {
 
 export function registerApiGatewayRoutes(app: Express) {
 
+  // Attach correlationId to every /api/v1 request (read from header or generate)
+  app.use("/api/v1", attachCorrelationId);
+
   // ─────────────────────────────────────────────
   // AUTH  (public — no JWT required)
   // ─────────────────────────────────────────────
@@ -62,9 +67,7 @@ export function registerApiGatewayRoutes(app: Express) {
           error: "identifier and mode (phone|email) are required",
         });
       }
-      if (!tenantId) {
-        return res.status(400).json({ success: false, error: "tenantId is required" });
-      }
+      // tenantId is optional — superadmin login has no tenant scope
 
       const ip = req.ip || "unknown";
       const key = mode === "phone" ? identifier.replace(/[-\s]/g, "") : identifier.toLowerCase();
@@ -72,6 +75,7 @@ export function registerApiGatewayRoutes(app: Express) {
         return res.status(429).json({ success: false, error: "TOO_MANY_REQUESTS" });
       }
 
+      const startMs = Date.now();
       const result = await authService.requestLogin(
         identifier,
         mode,
@@ -82,9 +86,23 @@ export function registerApiGatewayRoutes(app: Express) {
       );
 
       if (!result.success) {
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "error", durationMs: Date.now() - startMs, error: result.error, data: { mode } }).catch(() => {});
         return res.status(401).json({ success: false, error: result.error || "LOGIN_FAILED" });
       }
 
+      // Test mode: superadmin skips OTP — issue JWT immediately
+      if (!result.requiresOtp && result.user) {
+        const jwt = jwtService.issue({
+          userId: String(result.user._id),
+          tenantId: String(result.user.tenantId),
+          role: result.user.role,
+          name: result.user.name,
+        });
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login-bypass", status: "success", durationMs: Date.now() - startMs, data: { mode, userId: String(result.user._id) } }).catch(() => {});
+        return res.json({ success: true, requiresOtp: false, token: jwt, user: result.user });
+      }
+
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "success", durationMs: Date.now() - startMs, data: { mode } }).catch(() => {});
       log(`[${TAG}] OTP requested for ${key} on tenant ${tenantId}`, TAG);
       res.json({ success: true, requiresOtp: result.requiresOtp });
     } catch (err: any) {
@@ -116,6 +134,7 @@ export function registerApiGatewayRoutes(app: Express) {
         return res.status(429).json({ success: false, error: "TOO_MANY_REQUESTS" });
       }
 
+      const startMs = Date.now();
       const result = await authService.verifyLogin(
         identifier,
         mode,
@@ -126,6 +145,7 @@ export function registerApiGatewayRoutes(app: Express) {
       );
 
       if (!result) {
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "error", durationMs: Date.now() - startMs, error: "INVALID_OTP", data: { mode } }).catch(() => {});
         return res.status(401).json({ success: false, error: "INVALID_OTP" });
       }
 
@@ -137,6 +157,7 @@ export function registerApiGatewayRoutes(app: Express) {
         name: result.user.name,
       });
 
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "success", durationMs: Date.now() - startMs, data: { userId: String(result.user._id), mode } }).catch(() => {});
       log(`[${TAG}] JWT issued for user ${result.user._id} on tenant ${tenantId}`, TAG);
 
       res.json({
@@ -185,7 +206,10 @@ export function registerApiGatewayRoutes(app: Express) {
         return res.status(400).json({ success: false, error: "recipient and content are required" });
       }
 
+      const startMs = Date.now();
       const logEntry = await smsService.sendSms({ recipient, content, tenantId });
+      const smsStatus = (logEntry as any).status === "Success" ? "success" : "error";
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "sms", action: "send", status: smsStatus, durationMs: Date.now() - startMs, data: { recipient, messageId: (logEntry as any).messageId || null } }).catch(() => {});
 
       log(`[${TAG}] SMS sent to ${recipient} for tenant ${tenantId}`, TAG);
 
@@ -220,7 +244,9 @@ export function registerApiGatewayRoutes(app: Express) {
         return res.status(400).json({ success: false, error: "to, subject, html are required" });
       }
 
+      const startMs = Date.now();
       const result = await emailService.send({ to, subject, html, tenantId, replyTo });
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "email", action: "send", status: result.success ? "success" : "error", durationMs: Date.now() - startMs, error: result.success ? undefined : result.message, data: { to, credentialSource: result.credentialSource } }).catch(() => {});
 
       log(`[${TAG}] Email sent to ${to} for tenant ${tenantId}`, TAG);
 
@@ -250,12 +276,15 @@ export function registerApiGatewayRoutes(app: Express) {
       }
 
       const { whatsappSenderService } = await import("../services/whatsapp-sender.service");
+      const startMs = Date.now();
       const result = await whatsappSenderService.sendText({ to, message, tenantId });
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-text", status: "success", durationMs: Date.now() - startMs, data: { to } }).catch(() => {});
 
       log(`[${TAG}] WhatsApp sent to ${to} for tenant ${tenantId}`, TAG);
 
       res.json({ success: true, data: result });
     } catch (err: any) {
+      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-text", status: "error", error: err.message }).catch(() => {});
       log(`[${TAG}] whatsapp/send error: ${err.message}`, TAG);
       res.status(500).json({ success: false, error: err.message || "INTERNAL_ERROR" });
     }
@@ -279,6 +308,7 @@ export function registerApiGatewayRoutes(app: Express) {
       }
 
       const { whatsappSenderService } = await import("../services/whatsapp-sender.service");
+      const startMs = Date.now();
       const result = await whatsappSenderService.sendTemplate({
         to,
         templateName,
@@ -286,13 +316,53 @@ export function registerApiGatewayRoutes(app: Express) {
         components,
         tenantId,
       });
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-template", status: "success", durationMs: Date.now() - startMs, data: { to, templateName, languageCode } }).catch(() => {});
 
       log(`[${TAG}] WhatsApp template '${templateName}' sent to ${to} for tenant ${tenantId}`, TAG);
 
       res.json({ success: true, data: result });
     } catch (err: any) {
+      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-template", status: "error", error: err.message, data: { templateName: req.body?.templateName } }).catch(() => {});
       log(`[${TAG}] whatsapp/send-template error: ${err.message}`, TAG);
       res.status(500).json({ success: false, error: err.message || "INTERNAL_ERROR" });
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  // LOG  (for external apps — CPaaS, Bank, etc.)
+  // ─────────────────────────────────────────────
+
+  /**
+   * Emit a structured log event from an external application
+   * POST /api/v1/log
+   * Headers: Authorization: Bearer <jwt>
+   * Body: { service, action, status, tenantId?, level?, durationMs?, error?, data? }
+   * The correlationId is auto-attached from the request (x-correlation-id header or generated).
+   */
+  app.post("/api/v1/log", requireJwt, requireJwtTenant, async (req, res) => {
+    try {
+      const { service, action, status, tenantId, level, durationMs, error, data } = req.body;
+
+      if (!service || !action || !status) {
+        return res.status(400).json({ success: false, error: "service, action, status are required" });
+      }
+
+      const id = await logAdapter.emit({
+        correlationId: req.correlationId,
+        tenantId,
+        service,
+        action,
+        status,
+        level,
+        durationMs,
+        error,
+        data,
+      });
+
+      res.json({ success: true, data: { id, correlationId: req.correlationId } });
+    } catch (err: any) {
+      log(`[${TAG}] log emit error: ${err.message}`, TAG);
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
     }
   });
 
@@ -373,6 +443,187 @@ export function registerApiGatewayRoutes(app: Express) {
       }
     }
   );
+
+  /**
+   * Get single tenant
+   * GET /api/v1/admin/tenants/:id
+   */
+  app.get(
+    "/api/v1/admin/tenants/:id",
+    requireJwt,
+    requireJwtRole("superadmin"),
+    async (req, res) => {
+      try {
+        const { tenantService } = await import("../services/tenant.service");
+        const tenant = await tenantService.getById(req.params.id);
+        if (!tenant) return res.status(404).json({ success: false, error: "TENANT_NOT_FOUND" });
+        res.json({ success: true, data: tenant });
+      } catch (err: any) {
+        res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+      }
+    }
+  );
+
+  /**
+   * Update tenant
+   * PATCH /api/v1/admin/tenants/:id
+   */
+  app.patch(
+    "/api/v1/admin/tenants/:id",
+    requireJwt,
+    requireJwtRole("superadmin"),
+    async (req, res) => {
+      try {
+        const { tenantService } = await import("../services/tenant.service");
+        const tenant = await tenantService.update(req.params.id, req.body);
+        if (!tenant) return res.status(404).json({ success: false, error: "TENANT_NOT_FOUND" });
+        log(`[${TAG}] Tenant updated: ${req.params.id}`, TAG);
+        res.json({ success: true, data: tenant });
+      } catch (err: any) {
+        if (err.code === 11000) {
+          return res.status(409).json({ success: false, error: "SLUG_EXISTS" });
+        }
+        res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+      }
+    }
+  );
+
+  /**
+   * Toggle tenant active flag
+   * PATCH /api/v1/admin/tenants/:id/active
+   * Body: { active: boolean }
+   */
+  app.patch(
+    "/api/v1/admin/tenants/:id/active",
+    requireJwt,
+    requireJwtRole("superadmin"),
+    async (req, res) => {
+      try {
+        const { tenantService } = await import("../services/tenant.service");
+        const { active } = req.body;
+        if (typeof active !== "boolean")
+          return res.status(400).json({ success: false, error: "active (boolean) required" });
+        const tenant = await tenantService.update(req.params.id, { active } as any);
+        if (!tenant) return res.status(404).json({ success: false, error: "TENANT_NOT_FOUND" });
+        log(`[${TAG}] Tenant ${req.params.id} active=${active}`, TAG);
+        res.json({ success: true, data: tenant });
+      } catch (err: any) {
+        res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+      }
+    }
+  );
+
+  // ─────────────────────────────────────────────
+  // ADMIN — USERS  (SuperAdmin only)
+  // ─────────────────────────────────────────────
+
+  const USER_SAFE_FIELDS = "name phone email role tenantId active lastLoginAt isLocked";
+
+  /** GET /api/v1/admin/users?tenantId=&role=&page=&limit= */
+  app.get("/api/v1/admin/users", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { UserModel } = await import("../models/user.model");
+      const { TenantModel } = await import("../models/tenant.model");
+      const filter: any = {};
+      if (req.query.tenantId) filter.tenantId = req.query.tenantId;
+      if (req.query.role) filter.role = req.query.role;
+      const page = Math.max(1, parseInt(req.query.page as string) || 1);
+      const limit = Math.min(100, parseInt(req.query.limit as string) || 50);
+      const [users, total] = await Promise.all([
+        UserModel.find(filter).select(USER_SAFE_FIELDS).sort({ name: 1 }).skip((page - 1) * limit).limit(limit).lean(),
+        UserModel.countDocuments(filter),
+      ]);
+      const tenantIds = [...new Set(users.map((u: any) => u.tenantId ? String(u.tenantId) : null).filter((id): id is string => !!id && id !== "undefined" && /^[a-f\d]{24}$/i.test(id)))];
+      const tenants = await TenantModel.find({ _id: { $in: tenantIds } }).select("nameEn nameHe slug").lean();
+      const tenantMap = Object.fromEntries(tenants.map((t: any) => [String(t._id), t]));
+      const enriched = users.map((u: any) => ({ ...u, tenant: tenantMap[String(u.tenantId)] || null }));
+      res.json({ success: true, data: enriched, total, page, totalPages: Math.ceil(total / limit) });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  /** POST /api/v1/admin/users */
+  app.post("/api/v1/admin/users", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { UserModel } = await import("../models/user.model");
+      const { name, phone, email, role, tenantId, active } = req.body;
+      if (!name || !phone || !email || !role || !tenantId) {
+        return res.status(400).json({ success: false, error: "name, phone, email, role, tenantId are required" });
+      }
+      const user = new UserModel({ name, phone, email, role, tenantId, active: active ?? true });
+      await user.save();
+      log(`[${TAG}] User created: ${email} (${role}) for tenant ${tenantId}`, TAG);
+      res.status(201).json({ success: true, data: user });
+    } catch (err: any) {
+      if (err.code === 11000) return res.status(409).json({ success: false, error: "DUPLICATE_USER" });
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  /** PATCH /api/v1/admin/users/:id */
+  app.patch("/api/v1/admin/users/:id", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { UserModel } = await import("../models/user.model");
+      const { name, phone, email, role, tenantId, active } = req.body;
+      const update: any = {};
+      if (name !== undefined) update.name = name;
+      if (phone !== undefined) update.phone = phone;
+      if (email !== undefined) update.email = email;
+      if (role !== undefined) update.role = role;
+      if (tenantId !== undefined) update.tenantId = tenantId;
+      if (active !== undefined) update.active = active;
+      const user = await UserModel.findByIdAndUpdate(req.params.id, update, { new: true }).select(USER_SAFE_FIELDS).lean();
+      if (!user) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
+      log(`[${TAG}] User updated: ${req.params.id}`, TAG);
+      res.json({ success: true, data: user });
+    } catch (err: any) {
+      if (err.code === 11000) return res.status(409).json({ success: false, error: "DUPLICATE_USER" });
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  /** PATCH /api/v1/admin/users/:id/active  — Body: { active: boolean } */
+  app.patch("/api/v1/admin/users/:id/active", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { UserModel } = await import("../models/user.model");
+      const { active } = req.body;
+      if (typeof active !== "boolean") return res.status(400).json({ success: false, error: "active (boolean) required" });
+      const user = await UserModel.findByIdAndUpdate(req.params.id, { active }, { new: true }).select(USER_SAFE_FIELDS).lean();
+      if (!user) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
+      res.json({ success: true, data: user });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  // SSO — stubs for future implementation
+  // Wire real OAuth 2.0 / OIDC here (passport.js or custom)
+  // ─────────────────────────────────────────────
+
+  /**
+   * Initiate SSO login — redirect to provider's authorization URL
+   * GET /api/v1/auth/sso/:provider   (provider: "microsoft" | "google")
+   * TODO: build OAuth2 redirect using provider credentials stored in system_settings
+   */
+  app.get("/api/v1/auth/sso/:provider", (req, res) => {
+    const { provider } = req.params;
+    if (!["microsoft", "google"].includes(provider)) {
+      return res.status(400).json({ success: false, error: "UNKNOWN_PROVIDER" });
+    }
+    res.status(501).json({ success: false, error: "SSO_NOT_IMPLEMENTED", provider });
+  });
+
+  /**
+   * SSO callback — provider redirects here after auth
+   * GET /api/v1/auth/sso/:provider/callback
+   * TODO: exchange code for tokens, find/create user, issue Engine JWT
+   */
+  app.get("/api/v1/auth/sso/:provider/callback", (req, res) => {
+    const { provider } = req.params;
+    res.status(501).json({ success: false, error: "SSO_NOT_IMPLEMENTED", provider });
+  });
 
   log("API Gateway routes registered at /api/v1/*", TAG);
 }

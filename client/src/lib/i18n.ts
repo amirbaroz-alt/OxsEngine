@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
 import he from "./locales/he.json";
 import en from "./locales/en.json";
 import ar from "./locales/ar.json";
@@ -24,10 +23,16 @@ export function isRtl(lang: string): boolean {
   return rtlLanguages.includes(lang as SupportedLanguage);
 }
 
+const storedLang = localStorage.getItem("i18nextLng");
+const initialLang: SupportedLanguage =
+  storedLang && (supportedLanguages as readonly string[]).includes(storedLang)
+    ? (storedLang as SupportedLanguage)
+    : "he";
+
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: initialLang,
     resources: {
       he: { translation: he },
       en: { translation: en },
@@ -38,10 +43,6 @@ i18n
     fallbackLng: "he",
     interpolation: {
       escapeValue: false,
-    },
-    detection: {
-      order: ["localStorage"],
-      caches: ["localStorage"],
     },
   });
 

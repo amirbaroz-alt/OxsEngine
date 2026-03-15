@@ -1,6 +1,5 @@
+import mongoose from "mongoose";
 import { log } from "../lib/logger";
-import { getDb } from "../lib/db-manager";
-import { ObjectId } from "mongodb";
 
 const TAG = "queue-adapter";
 
@@ -17,16 +16,19 @@ export interface QueueMessage {
 }
 
 // ---------------------------------------------------------------------------
-// Dev implementation — MongoDB
+// Dev implementation — MongoDB (via mongoose default connection)
 // ---------------------------------------------------------------------------
 
 const COLLECTION = "queue_messages";
 const VISIBILITY_TIMEOUT_MS = 30_000;
 const TTL_SECONDS = 7 * 24 * 60 * 60; // 7 days
 
+function getCol() {
+  return mongoose.connection.collection(COLLECTION);
+}
+
 async function ensureIndexes() {
-  const db = await getDb();
-  const col = db.collection(COLLECTION);
+  const col = getCol();
   await col.createIndex({ createdAt: 1 }, { expireAfterSeconds: TTL_SECONDS, background: true });
   await col.createIndex({ queue: 1, visibleAfter: 1 }, { background: true });
 }
@@ -38,8 +40,7 @@ ensureIndexes().catch((err) =>
 
 const mongoAdapter = {
   async enqueue(queue: QueueName, payload: unknown, delayMs = 0): Promise<string> {
-    const db = await getDb();
-    const col = db.collection(COLLECTION);
+    const col = getCol();
     const now = new Date();
     const doc = {
       queue,
@@ -56,10 +57,9 @@ const mongoAdapter = {
   },
 
   async dequeue(queue: QueueName, batchSize = 1): Promise<QueueMessage[]> {
-    const db = await getDb();
-    const col = db.collection(COLLECTION);
+    const col = getCol();
     const now = new Date();
-    const processingId = new ObjectId().toHexString();
+    const processingId = new mongoose.Types.ObjectId().toHexString();
     const visibilityDeadline = new Date(now.getTime() + VISIBILITY_TIMEOUT_MS);
 
     const messages: QueueMessage[] = [];
@@ -79,7 +79,7 @@ const mongoAdapter = {
       );
       if (!doc) break;
       messages.push({
-        id: (doc._id as ObjectId).toHexString(),
+        id: (doc._id as mongoose.Types.ObjectId).toHexString(),
         queue: doc.queue as QueueName,
         payload: doc.payload,
         attempts: doc.attempts as number,
@@ -96,18 +96,16 @@ const mongoAdapter = {
   },
 
   async ack(id: string): Promise<void> {
-    const db = await getDb();
-    const col = db.collection(COLLECTION);
-    await col.deleteOne({ _id: new ObjectId(id) });
+    const col = getCol();
+    await col.deleteOne({ _id: new mongoose.Types.ObjectId(id) });
     log(`ack id=${id}`, TAG);
   },
 
   async nack(id: string, retryDelayMs = 5_000): Promise<void> {
-    const db = await getDb();
-    const col = db.collection(COLLECTION);
+    const col = getCol();
     const visibleAfter = new Date(Date.now() + retryDelayMs);
     await col.updateOne(
-      { _id: new ObjectId(id) },
+      { _id: new mongoose.Types.ObjectId(id) },
       {
         $inc: { attempts: 1 },
         $unset: { processingId: "" },

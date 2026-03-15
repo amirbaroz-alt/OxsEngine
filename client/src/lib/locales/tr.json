@@ -1289,5 +1289,71 @@
     "days": "gün",
     "hours": "saat",
     "minutes": "dk."
+  },
+  "backoffice": {
+    "nav": {
+      "dashboard": "Kontrol Paneli",
+      "tenants": "Şirketler",
+      "users": "Kullanıcılar",
+      "logs": "Günlükler",
+      "settings": "Ayarlar",
+      "logout": "Çıkış"
+    },
+    "dashboard": {
+      "title": "Kontrol Paneli",
+      "welcome": "Hoş geldiniz, {{name}}",
+      "tenants": "Şirketler",
+      "users": "Kullanıcılar",
+      "messagesToday": "Bugünkü Mesajlar",
+      "activeNow": "Şu An Aktif"
+    },
+    "users": {
+      "title": "Kullanıcılar",
+      "comingSoon": "Kullanıcı yöneticisi — yakında.",
+      "newUser": "Yeni Kullanıcı",
+      "editUser": "Kullanıcıyı Düzenle",
+      "createUser": "Kullanıcı Oluştur",
+      "saveChanges": "Değişiklikleri Kaydet",
+      "noUsers": "Kullanıcı bulunamadı",
+      "colName": "Ad",
+      "colTenant": "Şirket",
+      "colRole": "Rol",
+      "colActive": "Aktif",
+      "allTenants": "Tüm Şirketler",
+      "allRoles": "Tüm Roller",
+      "filterTenant": "Şirkete göre filtrele",
+      "filterRole": "Role göre filtrele",
+      "fieldName": "Tam Ad *",
+      "fieldPhone": "Telefon *",
+      "fieldEmail": "E-posta *",
+      "fieldRole": "Rol *",
+      "fieldTenant": "Şirket *",
+      "selectTenant": "Şirket seçin",
+      "validationRequired": "Ad, telefon, e-posta, rol ve şirket zorunludur",
+      "errorDuplicate": "Bu telefon/e-posta ile kullanıcı zaten mevcut",
+      "errorSaveFailed": "Kaydetme başarısız",
+      "errorLoadFailed": "Kullanıcılar yüklenemedi",
+      "errorNetwork": "Ağ hatası"
+    },
+    "logs": { "title": "Günlükler", "comingSoon": "İletişim ve denetim günlüğü görüntüleyici — yakında." },
+    "settings": { "title": "Ayarlar", "comingSoon": "Genel ayarlar — yakında." },
+    "tenants": {
+      "title": "Şirketler", "newTenant": "Yeni Şirket", "editTenant": "Şirketi Düzenle",
+      "createTenant": "Şirket Oluştur", "saveChanges": "Değişiklikleri Kaydet", "noTenants": "Henüz şirket yok",
+      "colName": "Ad", "colSlug": "Slug", "colLang": "Dil", "colQuota": "Kota", "colActive": "Aktif",
+      "active": "Aktif", "inactive": "Pasif", "proxyEnabled": "Proxy Etkin", "proxyDisabled": "Proxy Devre Dışı",
+      "sectionGeneral": "Genel", "sectionSms": "SMS (019)", "sectionEmail": "Email (SendGrid)",
+      "sectionWhatsapp": "WhatsApp", "sectionProxy": "Proxy (QuotaGuard)",
+      "fieldNameHe": "Ad (İbranice) *", "fieldNameEn": "Ad (İngilizce) *", "fieldSlug": "Slug * (URL tanımlayıcısı)",
+      "fieldDefaultLang": "Varsayılan Dil", "fieldMonthlyQuota": "Aylık Mesaj Kotası",
+      "fieldActive": "Aktif", "fieldSmsUsername": "Kullanıcı Adı", "fieldSmsPassword": "Şifre",
+      "fieldSmsSender": "Gönderen", "fieldSendGridKey": "SendGrid API Key",
+      "fieldFromEmail": "Gönderen E-posta", "fieldFromName": "Gönderen Adı",
+      "fieldPhoneNumberId": "Phone Number ID", "fieldAccessToken": "Access Token",
+      "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
+      "fieldEnableProxy": "Proxy'yi Etkinleştir", "errorSlugTaken": "Slug zaten kullanımda",
+      "errorNetwork": "Ağ hatası", "errorSaveFailed": "Kaydetme başarısız",
+      "errorLoadFailed": "Şirketler yüklenemedi", "validationRequired": "nameHe, nameEn ve slug zorunludur"
+    }
   }
 }

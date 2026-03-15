@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState, useCallback, lazy, Suspense } from "react";
 import { Switch, Route, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
+import { BackofficeAuthProvider } from "@/lib/backoffice-auth";
+import BackofficeApp from "@/pages/backoffice/index";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -287,6 +289,14 @@ function AppContent() {
   useEffect(() => {
     loadTranslationOverrides();
   }, []);
+
+  if (location.startsWith("/backoffice")) {
+    return (
+      <BackofficeAuthProvider>
+        <BackofficeApp />
+      </BackofficeAuthProvider>
+    );
+  }
 
   if (location === "/admin" || location === "/login/admin") {
     return <LoginPage />;

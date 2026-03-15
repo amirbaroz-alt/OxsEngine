@@ -1592,5 +1592,71 @@
     "days": "أيام",
     "hours": "ساعات",
     "minutes": "دقائق"
+  },
+  "backoffice": {
+    "nav": {
+      "dashboard": "لوحة التحكم",
+      "tenants": "الشركات",
+      "users": "المستخدمون",
+      "logs": "السجلات",
+      "settings": "الإعدادات",
+      "logout": "تسجيل الخروج"
+    },
+    "dashboard": {
+      "title": "لوحة التحكم",
+      "welcome": "مرحباً بعودتك، {{name}}",
+      "tenants": "الشركات",
+      "users": "المستخدمون",
+      "messagesToday": "رسائل اليوم",
+      "activeNow": "نشط الآن"
+    },
+    "users": {
+      "title": "المستخدمون",
+      "comingSoon": "مدير المستخدمين — قريباً.",
+      "newUser": "مستخدم جديد",
+      "editUser": "تعديل المستخدم",
+      "createUser": "إنشاء مستخدم",
+      "saveChanges": "حفظ التغييرات",
+      "noUsers": "لا يوجد مستخدمون",
+      "colName": "الاسم",
+      "colTenant": "الشركة",
+      "colRole": "الدور",
+      "colActive": "نشط",
+      "allTenants": "كل الشركات",
+      "allRoles": "كل الأدوار",
+      "filterTenant": "فلترة حسب الشركة",
+      "filterRole": "فلترة حسب الدور",
+      "fieldName": "الاسم الكامل *",
+      "fieldPhone": "الهاتف *",
+      "fieldEmail": "البريد الإلكتروني *",
+      "fieldRole": "الدور *",
+      "fieldTenant": "الشركة *",
+      "selectTenant": "اختر شركة",
+      "validationRequired": "الاسم والهاتف والبريد الإلكتروني والدور والشركة مطلوبة",
+      "errorDuplicate": "مستخدم بهذا الهاتف/البريد موجود بالفعل",
+      "errorSaveFailed": "فشل الحفظ",
+      "errorLoadFailed": "فشل تحميل المستخدمين",
+      "errorNetwork": "خطأ في الشبكة"
+    },
+    "logs": { "title": "السجلات", "comingSoon": "عارض السجلات — قريباً." },
+    "settings": { "title": "الإعدادات", "comingSoon": "الإعدادات العامة — قريباً." },
+    "tenants": {
+      "title": "الشركات", "newTenant": "شركة جديدة", "editTenant": "تعديل الشركة",
+      "createTenant": "إنشاء شركة", "saveChanges": "حفظ التغييرات", "noTenants": "لا توجد شركات بعد",
+      "colName": "الاسم", "colSlug": "Slug", "colLang": "اللغة", "colQuota": "الحصة", "colActive": "نشط",
+      "active": "نشط", "inactive": "غير نشط", "proxyEnabled": "البروكسي مفعّل", "proxyDisabled": "البروكسي معطّل",
+      "sectionGeneral": "عام", "sectionSms": "SMS (019)", "sectionEmail": "Email (SendGrid)",
+      "sectionWhatsapp": "WhatsApp", "sectionProxy": "بروكسي (QuotaGuard)",
+      "fieldNameHe": "الاسم (عبري) *", "fieldNameEn": "الاسم (إنجليزي) *", "fieldSlug": "Slug * (معرّف URL)",
+      "fieldDefaultLang": "اللغة الافتراضية", "fieldMonthlyQuota": "الحصة الشهرية",
+      "fieldActive": "نشط", "fieldSmsUsername": "اسم المستخدم", "fieldSmsPassword": "كلمة المرور",
+      "fieldSmsSender": "المُرسِل", "fieldSendGridKey": "SendGrid API Key",
+      "fieldFromEmail": "من بريد", "fieldFromName": "اسم المُرسِل",
+      "fieldPhoneNumberId": "Phone Number ID", "fieldAccessToken": "Access Token",
+      "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
+      "fieldEnableProxy": "تفعيل البروكسي", "errorSlugTaken": "Slug مستخدم بالفعل",
+      "errorNetwork": "خطأ في الشبكة", "errorSaveFailed": "فشل الحفظ",
+      "errorLoadFailed": "فشل تحميل الشركات", "validationRequired": "nameHe وnameEn وslug مطلوبة"
+    }
   }
 }

@@ -14,6 +14,7 @@ export function LanguageSwitcher() {
   const { t, i18n } = useTranslation();
 
   function changeLanguage(lang: SupportedLanguage) {
+    localStorage.setItem("i18nextLng", lang);
     i18n.changeLanguage(lang);
     const html = document.documentElement;
     html.setAttribute("dir", isRtl(lang) ? "rtl" : "ltr");

@@ -89,6 +89,7 @@ export class SmsService {
       sms: {
         user: {
           username: creds.userName,
+          password: creds.accessToken,
         },
         source: creds.source,
         destinations: {
@@ -106,7 +107,6 @@ export class SmsService {
         timeout: API_REQUEST_TIMEOUT_MS,
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${creds.accessToken}`,
         },
       });
 

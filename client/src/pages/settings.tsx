@@ -29,7 +29,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Switch } from "@/components/ui/switch";
+import { ToggleBadge } from "@/components/ui/toggle-badge";
 import {
   Settings,
   MessageSquare,
@@ -903,14 +903,12 @@ export default function SettingsPage() {
               <Clock className="h-5 w-5" />
               {t("sla.title")}
             </CardTitle>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">{t("sla.enabled")}</span>
-              <Switch
-                checked={slaEnabled}
-                onCheckedChange={setSlaEnabled}
-                data-testid="switch-sla-enabled"
-              />
-            </div>
+            <ToggleBadge
+              checked={slaEnabled}
+              onCheckedChange={setSlaEnabled}
+              labels={{ on: t("sla.enabled"), off: t("sla.enabled") }}
+              data-testid="switch-sla-enabled"
+            />
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-sm text-muted-foreground">{t("sla.description")}</p>

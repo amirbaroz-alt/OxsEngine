@@ -1592,5 +1592,71 @@
     "days": "дн.",
     "hours": "ч.",
     "minutes": "мин."
+  },
+  "backoffice": {
+    "nav": {
+      "dashboard": "Панель управления",
+      "tenants": "Компании",
+      "users": "Пользователи",
+      "logs": "Журналы",
+      "settings": "Настройки",
+      "logout": "Выход"
+    },
+    "dashboard": {
+      "title": "Панель управления",
+      "welcome": "Добро пожаловать, {{name}}",
+      "tenants": "Компании",
+      "users": "Пользователи",
+      "messagesToday": "Сообщений сегодня",
+      "activeNow": "Активно сейчас"
+    },
+    "users": {
+      "title": "Пользователи",
+      "comingSoon": "Управление пользователями — скоро.",
+      "newUser": "Новый пользователь",
+      "editUser": "Редактировать пользователя",
+      "createUser": "Создать пользователя",
+      "saveChanges": "Сохранить",
+      "noUsers": "Пользователи не найдены",
+      "colName": "Имя",
+      "colTenant": "Компания",
+      "colRole": "Роль",
+      "colActive": "Активен",
+      "allTenants": "Все компании",
+      "allRoles": "Все роли",
+      "filterTenant": "Фильтр по компании",
+      "filterRole": "Фильтр по роли",
+      "fieldName": "Полное имя *",
+      "fieldPhone": "Телефон *",
+      "fieldEmail": "Email *",
+      "fieldRole": "Роль *",
+      "fieldTenant": "Компания *",
+      "selectTenant": "Выберите компанию",
+      "validationRequired": "Имя, телефон, email, роль и компания обязательны",
+      "errorDuplicate": "Пользователь с таким телефоном/email уже существует",
+      "errorSaveFailed": "Ошибка сохранения",
+      "errorLoadFailed": "Ошибка загрузки пользователей",
+      "errorNetwork": "Ошибка сети"
+    },
+    "logs": { "title": "Журналы", "comingSoon": "Просмотр журналов — скоро." },
+    "settings": { "title": "Настройки", "comingSoon": "Глобальные настройки — скоро." },
+    "tenants": {
+      "title": "Компании", "newTenant": "Новая компания", "editTenant": "Редактировать компанию",
+      "createTenant": "Создать компанию", "saveChanges": "Сохранить", "noTenants": "Нет компаний",
+      "colName": "Название", "colSlug": "Slug", "colLang": "Язык", "colQuota": "Квота", "colActive": "Активна",
+      "active": "Активна", "inactive": "Неактивна", "proxyEnabled": "Прокси включён", "proxyDisabled": "Прокси выключен",
+      "sectionGeneral": "Основное", "sectionSms": "SMS (019)", "sectionEmail": "Email (SendGrid)",
+      "sectionWhatsapp": "WhatsApp", "sectionProxy": "Прокси (QuotaGuard)",
+      "fieldNameHe": "Название (иврит) *", "fieldNameEn": "Название (английский) *", "fieldSlug": "Slug * (идентификатор URL)",
+      "fieldDefaultLang": "Язык по умолчанию", "fieldMonthlyQuota": "Месячная квота сообщений",
+      "fieldActive": "Активна", "fieldSmsUsername": "Имя пользователя", "fieldSmsPassword": "Пароль",
+      "fieldSmsSender": "Отправитель", "fieldSendGridKey": "SendGrid API Key",
+      "fieldFromEmail": "От (email)", "fieldFromName": "Имя отправителя",
+      "fieldPhoneNumberId": "Phone Number ID", "fieldAccessToken": "Access Token",
+      "fieldVerifyToken": "Verify Token", "fieldWabaId": "WABA ID", "fieldProxyUrl": "Proxy URL",
+      "fieldEnableProxy": "Включить прокси", "errorSlugTaken": "Slug уже занят",
+      "errorNetwork": "Ошибка сети", "errorSaveFailed": "Ошибка сохранения",
+      "errorLoadFailed": "Ошибка загрузки компаний", "validationRequired": "nameHe, nameEn и slug обязательны"
+    }
   }
 }
