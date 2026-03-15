@@ -616,6 +616,9 @@ export function registerApiGatewayRoutes(app: Express) {
       const { UserModel } = await import("../models/user.model");
       const { OTCModel } = await import("../models/otc.model");
 
+      if (!/^[a-f\d]{24}$/i.test(req.params.userId)) {
+        return res.status(400).json({ success: false, error: "INVALID_USER_ID" });
+      }
       const target = await UserModel.findById(req.params.userId)
         .select("name email role tenantId active").lean();
       if (!target) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
@@ -666,7 +669,7 @@ export function registerApiGatewayRoutes(app: Express) {
    */
   app.post("/api/v1/auth/exchange-otc", async (req, res) => {
     try {
-      const { code } = req.body;
+      const code = req.body?.code;
       if (!code) return res.status(400).json({ success: false, error: "code required" });
       const { OTCModel } = await import("../models/otc.model");
       const otc = await OTCModel.findOneAndDelete({ code });
