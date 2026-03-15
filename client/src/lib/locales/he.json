@@ -1657,7 +1657,9 @@
       "errorDuplicate": "משתמש עם טלפון/אימייל זה כבר קיים בחברה זו",
       "errorSaveFailed": "שמירה נכשלה",
       "errorLoadFailed": "טעינת משתמשים נכשלה",
-      "errorNetwork": "שגיאת רשת"
+      "errorNetwork": "שגיאת רשת",
+      "impersonate": "התחזה",
+      "impersonateFailed": "ההתחזות נכשלה"
     },
     "logs": {
       "title": "יומנים",
@@ -1712,5 +1714,8 @@
       "errorLoadFailed": "טעינת חברות נכשלה",
       "validationRequired": "nameHe, nameEn ו-slug הם שדות חובה"
     }
+  },
+  "impersonation": {
+    "bannerText": "⚠ מצב התחזות — צופה בתור {{name}} ({{role}})"
   }
 }

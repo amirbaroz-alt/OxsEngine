@@ -1333,7 +1333,9 @@
       "errorDuplicate": "Bu telefon/e-posta ile kullanıcı zaten mevcut",
       "errorSaveFailed": "Kaydetme başarısız",
       "errorLoadFailed": "Kullanıcılar yüklenemedi",
-      "errorNetwork": "Ağ hatası"
+      "errorNetwork": "Ağ hatası",
+      "impersonate": "Olarak giriş",
+      "impersonateFailed": "Bürünme başarısız"
     },
     "logs": { "title": "Günlükler", "comingSoon": "İletişim ve denetim günlüğü görüntüleyici — yakında." },
     "settings": { "title": "Ayarlar", "comingSoon": "Genel ayarlar — yakında." },
@@ -1355,5 +1357,8 @@
       "errorNetwork": "Ağ hatası", "errorSaveFailed": "Kaydetme başarısız",
       "errorLoadFailed": "Şirketler yüklenemedi", "validationRequired": "nameHe, nameEn ve slug zorunludur"
     }
+  },
+  "impersonation": {
+    "bannerText": "⚠ Bürünme Modu — {{name}} ({{role}}) olarak görüntülüyorsunuz"
   }
 }

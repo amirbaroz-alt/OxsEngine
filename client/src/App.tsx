@@ -3,6 +3,8 @@ import { Switch, Route, useLocation } from "wouter";
 import { useTranslation } from "react-i18next";
 import { BackofficeAuthProvider } from "@/lib/backoffice-auth";
 import BackofficeApp from "@/pages/backoffice/index";
+import { ImpersonationProvider } from "@/lib/impersonation-context";
+import { ImpersonationBanner } from "@/components/impersonation-banner";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -158,11 +160,13 @@ function AuthenticatedApp() {
   };
 
   return (
+    <ImpersonationProvider>
     <RoleProvider>
       <SidebarProvider style={style as React.CSSProperties}>
         <div className="flex h-screen w-full">
           <AppSidebar />
           <div className="flex flex-col flex-1 min-w-0">
+            <ImpersonationBanner />
             <header dir={rtl ? "rtl" : "ltr"} className="flex items-center justify-between gap-1 md:gap-2 px-1.5 py-1 md:p-3 border-b bg-background sticky top-0 z-50">
               <div className="flex items-center gap-1 md:gap-2 min-w-0 max-w-[200px] md:max-w-none">
                 {user && (
@@ -271,13 +275,16 @@ function AuthenticatedApp() {
         </div>
       </SidebarProvider>
     </RoleProvider>
+    </ImpersonationProvider>
   );
 }
 
 function AppContent() {
   const { i18n } = useTranslation();
   const [location] = useLocation();
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading, login } = useAuth();
+  const [otcLoading, setOtcLoading] = useState(false);
+  const [otcError, setOtcError] = useState("");
 
   useEffect(() => {
     const lang = i18n.language || "he";
@@ -289,6 +296,50 @@ function AppContent() {
   useEffect(() => {
     loadTranslationOverrides();
   }, []);
+
+  // OTC exchange — handles impersonation token handoff from backoffice
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("otc");
+    if (!code) return;
+    // Remove OTC from URL immediately so it never sits in browser history
+    params.delete("otc");
+    const cleanUrl = window.location.pathname + (params.toString() ? `?${params.toString()}` : "");
+    window.history.replaceState({}, "", cleanUrl);
+    setOtcLoading(true);
+    fetch("/api/v1/auth/exchange-otc", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.success) {
+          login(data.token, data.user);
+        } else {
+          setOtcError(data.error || "INVALID_OR_EXPIRED_CODE");
+        }
+      })
+      .catch(() => setOtcError("NETWORK_ERROR"))
+      .finally(() => setOtcLoading(false));
+  }, []);
+
+  if (otcLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full" />
+      </div>
+    );
+  }
+
+  if (otcError) {
+    return (
+      <div className="min-h-screen flex items-center justify-center flex-col gap-3 text-center p-6">
+        <p className="text-destructive font-medium">Impersonation failed: {otcError}</p>
+        <a href="/login" className="text-sm text-muted-foreground underline">Go to login</a>
+      </div>
+    );
+  }
 
   if (location.startsWith("/backoffice")) {
     return (

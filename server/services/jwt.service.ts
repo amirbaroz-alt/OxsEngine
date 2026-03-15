@@ -8,10 +8,14 @@ export interface JwtPayload {
   iat: number;
   exp: number;
   iss: string;
+  // Impersonation claims — only present on impersonation tokens
+  isImpersonated?: boolean;
+  impersonatorId?: string;
 }
 
 const ISSUER = "oxs-engine";
 const DEFAULT_TTL = 86400;
+const IMPERSONATION_TTL = 3 * 3600; // 3 hours
 
 function getSecret() {
   const s = process.env.JWT_SECRET;
@@ -34,15 +38,37 @@ function sign(h: string, p: string, s: string) {
 }
 
 class JwtService {
-  issue(params: { userId: string; tenantId: string; role: string; name?: string; ttlSeconds?: number }) {
+  issue(params: {
+    userId: string; tenantId: string; role: string; name?: string; ttlSeconds?: number;
+    isImpersonated?: boolean; impersonatorId?: string;
+  }) {
     const sec = getSecret();
     const now = Math.floor(Date.now() / 1000);
     const h = b64url(JSON.stringify({ alg: "HS256", typ: "JWT" }));
-    const pl = b64url(JSON.stringify({
+    const payload: Record<string, unknown> = {
       sub: params.userId, tenantId: params.tenantId, role: params.role,
       name: params.name, iat: now, exp: now + (params.ttlSeconds ?? DEFAULT_TTL), iss: ISSUER,
-    }));
+    };
+    if (params.isImpersonated) {
+      payload.isImpersonated = true;
+      payload.impersonatorId = params.impersonatorId;
+    }
+    const pl = b64url(JSON.stringify(payload));
     return h + "." + pl + "." + sign(h, pl, sec);
+  }
+
+  issueImpersonation(params: {
+    targetUserId: string; tenantId: string; role: string; name?: string; impersonatorId: string;
+  }) {
+    return this.issue({
+      userId: params.targetUserId,
+      tenantId: params.tenantId,
+      role: params.role,
+      name: params.name,
+      ttlSeconds: IMPERSONATION_TTL,
+      isImpersonated: true,
+      impersonatorId: params.impersonatorId,
+    });
   }
 
   verify(token: string): JwtPayload {

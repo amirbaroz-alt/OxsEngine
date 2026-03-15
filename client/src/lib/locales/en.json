@@ -1331,7 +1331,9 @@
       "errorDuplicate": "User with this phone/email already exists in this tenant",
       "errorSaveFailed": "Save failed",
       "errorLoadFailed": "Failed to load users",
-      "errorNetwork": "Network error"
+      "errorNetwork": "Network error",
+      "impersonate": "Impersonate",
+      "impersonateFailed": "Impersonation failed"
     },
     "logs": {
       "title": "Logs",
@@ -1386,5 +1388,8 @@
       "errorLoadFailed": "Failed to load tenants",
       "validationRequired": "nameHe, nameEn and slug are required"
     }
+  },
+  "impersonation": {
+    "bannerText": "⚠ Impersonation Mode — viewing as {{name}} ({{role}})"
   }
 }

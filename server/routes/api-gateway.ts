@@ -8,7 +8,9 @@ import {
   requireJwtRole,
   requireJwtTenant,
   attachCorrelationId,
+  impersonationAudit,
 } from "../middleware/api-gateway.middleware";
+import { randomUUID } from "crypto";
 import { logAdapter } from "../lib/log.adapter";
 import { log } from "../index";
 
@@ -47,6 +49,9 @@ export function registerApiGatewayRoutes(app: Express) {
 
   // Attach correlationId to every /api/v1 request (read from header or generate)
   app.use("/api/v1", attachCorrelationId);
+
+  // Global impersonation audit — blocks DELETE and logs all writes during impersonation
+  app.use("/api/v1", impersonationAudit);
 
   // ─────────────────────────────────────────────
   // AUTH  (public — no JWT required)
@@ -592,6 +597,81 @@ export function registerApiGatewayRoutes(app: Express) {
       const user = await UserModel.findByIdAndUpdate(req.params.id, { active }, { new: true }).select(USER_SAFE_FIELDS).lean();
       if (!user) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
       res.json({ success: true, data: user });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  // IMPERSONATION  (SuperAdmin only)
+  // ─────────────────────────────────────────────
+
+  /**
+   * POST /api/v1/admin/impersonate/:userId
+   * Issues an impersonation token and returns a one-time code (OTC).
+   * The OTC is valid for 30 seconds and can only be used once.
+   */
+  app.post("/api/v1/admin/impersonate/:userId", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { UserModel } = await import("../models/user.model");
+      const { OTCModel } = await import("../models/otc.model");
+
+      const target = await UserModel.findById(req.params.userId)
+        .select("name email role tenantId active").lean();
+      if (!target) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
+      if (!(target as any).active) return res.status(400).json({ success: false, error: "USER_INACTIVE" });
+
+      const impersonatorId = req.jwtPayload!.sub;
+
+      const token = jwtService.issueImpersonation({
+        targetUserId: String(target._id),
+        tenantId: String(target.tenantId),
+        role: (target as any).role,
+        name: (target as any).name,
+        impersonatorId,
+      });
+
+      const code = randomUUID();
+      await OTCModel.create({ code, token });
+
+      // Log impersonation START through the standard pipeline
+      logAdapter.emit({
+        correlationId: req.correlationId,
+        tenantId: String(target.tenantId),
+        service: "impersonation",
+        action: "impersonation-start",
+        status: "success",
+        data: {
+          impersonatorId,
+          targetUserId: String(target._id),
+          targetEmail: (target as any).email,
+          targetRole: (target as any).role,
+          ip: req.ip,
+        },
+      }).catch(() => {});
+
+      log(`[${TAG}] Impersonation started: ${impersonatorId} → ${String(target._id)}`, TAG);
+      res.json({ success: true, code });
+    } catch (err: any) {
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  /**
+   * POST /api/v1/auth/exchange-otc
+   * Exchanges a one-time code for the impersonation JWT.
+   * The code is deleted immediately after use.
+   * Body: { code: string }
+   */
+  app.post("/api/v1/auth/exchange-otc", async (req, res) => {
+    try {
+      const { code } = req.body;
+      if (!code) return res.status(400).json({ success: false, error: "code required" });
+      const { OTCModel } = await import("../models/otc.model");
+      const otc = await OTCModel.findOneAndDelete({ code });
+      if (!otc) return res.status(401).json({ success: false, error: "INVALID_OR_EXPIRED_CODE" });
+      const payload = jwtService.decode(otc.token);
+      res.json({ success: true, token: otc.token, user: payload });
     } catch (err: any) {
       res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
     }

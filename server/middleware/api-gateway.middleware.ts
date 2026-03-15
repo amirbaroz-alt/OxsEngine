@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { jwtService, type JwtPayload } from "../services/jwt.service";
-import { generateCorrelationId } from "../lib/log.adapter";
+import { logAdapter, generateCorrelationId } from "../lib/log.adapter";
 
 declare global {
   namespace Express {
@@ -36,6 +36,43 @@ export function requireJwtRole(...roles: string[]) {
       return res.status(403).json({ success: false, error: "FORBIDDEN" });
     next();
   };
+}
+
+/**
+ * Global impersonation audit middleware.
+ * Runs on every write request (POST, PUT, PATCH, DELETE) on /api/v1/*.
+ * - Blocks DELETE entirely during impersonation.
+ * - Emits an audit log entry for every other write via the standard log pipeline.
+ */
+export function impersonationAudit(req: Request, res: Response, next: NextFunction) {
+  if (!["POST", "PUT", "PATCH", "DELETE"].includes(req.method)) return next();
+
+  const h = req.headers.authorization;
+  if (!h?.startsWith("Bearer ")) return next();
+
+  const payload = jwtService.decode(h.substring(7));
+  if (!payload?.isImpersonated || !payload?.impersonatorId) return next();
+
+  if (req.method === "DELETE") {
+    return res.status(403).json({ success: false, error: "IMPERSONATION_CANNOT_DELETE" });
+  }
+
+  logAdapter.emit({
+    correlationId: req.correlationId,
+    tenantId: payload.tenantId,
+    service: "impersonation",
+    action: `${req.method} ${req.path}`,
+    status: "success",
+    data: {
+      impersonatorId: payload.impersonatorId,
+      targetUserId: payload.sub,
+      entityId: (req.params as Record<string, string>)?.id ?? null,
+      method: req.method,
+      path: req.path,
+    },
+  }).catch(() => {});
+
+  next();
 }
 
 export function requireJwtTenant(req: Request, res: Response, next: NextFunction) {

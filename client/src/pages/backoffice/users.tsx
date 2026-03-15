@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useBackofficeAuth } from "@/lib/backoffice-auth";
-import { Users, Plus, Pencil, Check, X, Loader2 } from "lucide-react";
+import { Users, Plus, Pencil, Check, X, Loader2, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -49,6 +49,7 @@ export default function BackofficeUsersPage() {
   const [form, setForm] = useState(EMPTY_FORM);
   const [saving, setSaving] = useState(false);
   const [formError, setFormError] = useState("");
+  const [impersonating, setImpersonating] = useState<string | null>(null);
 
   const headers = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
 
@@ -116,6 +117,23 @@ export default function BackofficeUsersPage() {
       setFormError(t("backoffice.users.errorNetwork"));
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handleImpersonate(user: User) {
+    setImpersonating(user._id);
+    try {
+      const res = await fetch(`/api/v1/admin/impersonate/${user._id}`, { method: "POST", headers });
+      const data = await res.json();
+      if (!data.success) {
+        alert(data.error || t("backoffice.users.impersonateFailed"));
+        return;
+      }
+      window.open(`/?otc=${data.code}`, "_blank");
+    } catch {
+      alert(t("backoffice.users.errorNetwork"));
+    } finally {
+      setImpersonating(null);
     }
   }
 
@@ -223,9 +241,24 @@ export default function BackofficeUsersPage() {
                     <ToggleBadge checked={user.active} onCheckedChange={() => toggleActive(user)} />
                   </td>
                   <td className="px-4 py-2.5 text-right">
-                    <Button variant="ghost" size="sm" className="gap-1.5 h-7" onClick={() => openEdit(user)}>
-                      <Pencil className="h-3.5 w-3.5" /> {t("common.edit")}
-                    </Button>
+                    <div className="flex items-center justify-end gap-1">
+                      <Button variant="ghost" size="sm" className="gap-1.5 h-7" onClick={() => openEdit(user)}>
+                        <Pencil className="h-3.5 w-3.5" /> {t("common.edit")}
+                      </Button>
+                      {user.role !== "superadmin" && (
+                        <Button
+                          variant="ghost" size="sm"
+                          className="gap-1.5 h-7 text-amber-600 hover:text-amber-700 hover:bg-amber-50"
+                          onClick={() => handleImpersonate(user)}
+                          disabled={impersonating === user._id}
+                          title={t("backoffice.users.impersonate")}
+                        >
+                          {impersonating === user._id
+                            ? <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                            : <UserCheck className="h-3.5 w-3.5" />}
+                        </Button>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}

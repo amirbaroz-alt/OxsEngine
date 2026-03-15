@@ -1636,7 +1636,9 @@
       "errorDuplicate": "Пользователь с таким телефоном/email уже существует",
       "errorSaveFailed": "Ошибка сохранения",
       "errorLoadFailed": "Ошибка загрузки пользователей",
-      "errorNetwork": "Ошибка сети"
+      "errorNetwork": "Ошибка сети",
+      "impersonate": "Войти как",
+      "impersonateFailed": "Ошибка имперсонации"
     },
     "logs": { "title": "Журналы", "comingSoon": "Просмотр журналов — скоро." },
     "settings": { "title": "Настройки", "comingSoon": "Глобальные настройки — скоро." },
@@ -1658,5 +1660,8 @@
       "errorNetwork": "Ошибка сети", "errorSaveFailed": "Ошибка сохранения",
       "errorLoadFailed": "Ошибка загрузки компаний", "validationRequired": "nameHe, nameEn и slug обязательны"
     }
+  },
+  "impersonation": {
+    "bannerText": "⚠ Режим имперсонации — просмотр как {{name}} ({{role}})"
   }
 }

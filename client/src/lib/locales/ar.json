@@ -1636,7 +1636,9 @@
       "errorDuplicate": "مستخدم بهذا الهاتف/البريد موجود بالفعل",
       "errorSaveFailed": "فشل الحفظ",
       "errorLoadFailed": "فشل تحميل المستخدمين",
-      "errorNetwork": "خطأ في الشبكة"
+      "errorNetwork": "خطأ في الشبكة",
+      "impersonate": "انتحال الهوية",
+      "impersonateFailed": "فشل انتحال الهوية"
     },
     "logs": { "title": "السجلات", "comingSoon": "عارض السجلات — قريباً." },
     "settings": { "title": "الإعدادات", "comingSoon": "الإعدادات العامة — قريباً." },
@@ -1658,5 +1660,8 @@
       "errorNetwork": "خطأ في الشبكة", "errorSaveFailed": "فشل الحفظ",
       "errorLoadFailed": "فشل تحميل الشركات", "validationRequired": "nameHe وnameEn وslug مطلوبة"
     }
+  },
+  "impersonation": {
+    "bannerText": "⚠ وضع انتحال الهوية — تصفح كـ {{name}} ({{role}})"
   }
 }
