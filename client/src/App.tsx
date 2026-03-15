@@ -283,7 +283,11 @@ function AppContent() {
   const { i18n } = useTranslation();
   const [location] = useLocation();
   const { isAuthenticated, isLoading, login } = useAuth();
-  const [otcLoading, setOtcLoading] = useState(false);
+  // Initialize as true synchronously if OTC code is in URL — prevents race condition
+  // where isLoading=false + isAuthenticated=false fires before the OTC useEffect sets otcLoading=true
+  const [otcLoading, setOtcLoading] = useState(
+    () => !!new URLSearchParams(window.location.search).get("otc")
+  );
   const [otcError, setOtcError] = useState("");
 
   useEffect(() => {
@@ -315,7 +319,14 @@ function AppContent() {
       .then((r) => r.json())
       .then((data) => {
         if (data.success) {
-          login(data.token, data.user);
+          // JWT payload uses `sub` for userId; map to AuthUser shape expected by main app
+          const u = data.user;
+          login(data.token, {
+            _id: u.sub ?? u._id,
+            name: u.name ?? "",
+            role: u.role,
+            tenantId: u.tenantId,
+          });
         } else {
           setOtcError(data.error || "INVALID_OR_EXPIRED_CODE");
         }
