@@ -88,15 +88,15 @@ export default function BackofficeLogsPage() {
       const res = await fetch(`/api/v1/admin/logs?${params}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      const json = await res.json();
-      if (!json.success) throw new Error(json.error || "error");
+      const json = await res.json().catch(() => ({ success: false, error: `HTTP ${res.status}` }));
+      if (!res.ok || !json.success) throw new Error(`${res.status}: ${json.error || res.statusText}`);
       setLogs(json.data);
       setTotal(json.total);
       setTotalPages(json.totalPages);
       setPage(p);
       setExpanded(new Set());
-    } catch {
-      setError(t("backoffice.logs.loadError"));
+    } catch (err: any) {
+      setError(`${t("backoffice.logs.loadError")}: ${err.message || "unknown"}`);
     } finally {
       setLoading(false);
     }
