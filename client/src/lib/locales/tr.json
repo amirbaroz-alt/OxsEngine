@@ -1337,7 +1337,7 @@
       "impersonate": "Olarak giriş",
       "impersonateFailed": "Bürünme başarısız"
     },
-    "logs": { "title": "Günlükler", "comingSoon": "İletişim ve denetim günlüğü görüntüleyici — yakında." },
+    "logs": { "title": "Günlükler", "comingSoon": "İletişim ve denetim günlüğü görüntüleyici — yakında.", "search": "Ara (telefon, e-posta, isim…)", "filterService": "Servis", "filterStatus": "Durum", "filterLevel": "Seviye", "allServices": "Tüm servisler", "allStatuses": "Tüm durumlar", "allLevels": "Tüm seviyeler", "from": "Başlangıç tarihi", "to": "Bitiş tarihi", "refresh": "Yenile", "autoRefresh": "Otomatik yenile", "colTime": "Zaman", "colService": "Servis", "colAction": "İşlem", "colStatus": "Durum", "colTenant": "Şirket", "colSearchable": "Müşteri", "colDuration": "ms", "noLogs": "Günlük bulunamadı", "loadError": "Günlükler yüklenemedi", "details": "Ayrıntılar", "errorDetails": "Hata", "page": "Sayfa {{page}} / {{total}}" },
     "settings": { "title": "Ayarlar", "comingSoon": "Genel ayarlar — yakında." },
     "tenants": {
       "title": "Şirketler", "newTenant": "Yeni Şirket", "editTenant": "Şirketi Düzenle",

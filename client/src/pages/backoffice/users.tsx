@@ -129,7 +129,8 @@ export default function BackofficeUsersPage() {
         alert(data.error || t("backoffice.users.impersonateFailed"));
         return;
       }
-      window.open(`/?otc=${data.code}`, "_blank");
+      const win = window.open(`/?otc=${data.code}`, "_blank");
+      if (!win) alert("הדפדפן חסם את החלון החדש. אנא אפשר חלונות קופצים עבור אתר זה ונסה שוב.");
     } catch {
       alert(t("backoffice.users.errorNetwork"));
     } finally {
@@ -139,11 +140,15 @@ export default function BackofficeUsersPage() {
 
   async function toggleActive(user: User) {
     try {
-      await fetch(`/api/v1/admin/users/${user._id}/active`, {
+      const res = await fetch(`/api/v1/admin/users/${user._id}/active`, {
         method: "PATCH", headers, body: JSON.stringify({ active: !user.active }),
       });
-      loadUsers();
-    } catch {}
+      const data = await res.json();
+      if (!data.success) setError(data.error || t("backoffice.users.errorSaveFailed"));
+      else loadUsers();
+    } catch {
+      setError(t("backoffice.users.errorNetwork"));
+    }
   }
 
   const ROLE_COLORS: Record<string, string> = {

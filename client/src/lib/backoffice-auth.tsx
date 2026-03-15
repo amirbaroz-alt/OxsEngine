@@ -32,7 +32,12 @@ export function BackofficeAuthProvider({ children }: { children: ReactNode }) {
         if (!res.ok) throw new Error("invalid");
         return res.json();
       })
-      .then((data) => setUser(data.user))
+      .then((data) => setUser({
+        userId: data.user.sub ?? data.user.userId ?? data.user._id,
+        tenantId: data.user.tenantId,
+        role: data.user.role,
+        name: data.user.name ?? "",
+      }))
       .catch(() => { localStorage.removeItem(TOKEN_KEY); setToken(null); })
       .finally(() => setIsLoading(false));
   }, []);

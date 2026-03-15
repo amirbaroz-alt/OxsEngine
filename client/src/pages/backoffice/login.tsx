@@ -51,23 +51,32 @@ export default function BackofficeLoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [countdown, setCountdown] = useState(0);
   const otpRef = useRef<HTMLDivElement>(null);
+  const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     if (isAuthenticated) window.location.href = "/backoffice";
   }, [isAuthenticated]);
 
   useEffect(() => {
+    return () => { if (countdownRef.current) clearInterval(countdownRef.current); };
+  }, []);
+
+  useEffect(() => {
     if (step !== "otp") return;
-    const t = setTimeout(() => {
+    const focusTimer = setTimeout(() => {
       otpRef.current?.querySelector("input")?.focus();
     }, 100);
-    return () => clearTimeout(t);
+    return () => clearTimeout(focusTimer);
   }, [step]);
 
   function startCountdown() {
+    if (countdownRef.current) clearInterval(countdownRef.current);
     setCountdown(60);
-    const iv = setInterval(() => {
-      setCountdown((p) => { if (p <= 1) { clearInterval(iv); return 0; } return p - 1; });
+    countdownRef.current = setInterval(() => {
+      setCountdown((p) => {
+        if (p <= 1) { clearInterval(countdownRef.current!); countdownRef.current = null; return 0; }
+        return p - 1;
+      });
     }, 1000);
   }
 
@@ -95,7 +104,13 @@ export default function BackofficeLoginPage() {
       }
       // test mode: superadmin bypasses OTP
       if (!data.requiresOtp && data.token) {
-        login(data.token, data.user);
+        const u = data.user;
+        login(data.token, {
+          userId: u._id ?? u.userId ?? u.sub,
+          tenantId: u.tenantId,
+          role: u.role,
+          name: u.name ?? "",
+        });
         return;
       }
       setStep("otp"); startCountdown();
@@ -118,7 +133,13 @@ export default function BackofficeLoginPage() {
         setError(data.error === "INVALID_OTP" ? "קוד שגוי" : "אימות נכשל");
         setOtp(""); return;
       }
-      login(data.token, data.user);
+      const u = data.user;
+      login(data.token, {
+        userId: u._id ?? u.userId ?? u.sub,
+        tenantId: u.tenantId,
+        role: u.role,
+        name: u.name ?? "",
+      });
     } catch { setError("שגיאת רשת"); }
     finally { setIsLoading(false); }
   }

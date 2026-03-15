@@ -1640,7 +1640,7 @@
       "impersonate": "Войти как",
       "impersonateFailed": "Ошибка имперсонации"
     },
-    "logs": { "title": "Журналы", "comingSoon": "Просмотр журналов — скоро." },
+    "logs": { "title": "Журналы", "comingSoon": "Просмотр журналов — скоро.", "search": "Поиск (телефон, email, имя…)", "filterService": "Сервис", "filterStatus": "Статус", "filterLevel": "Уровень", "allServices": "Все сервисы", "allStatuses": "Все статусы", "allLevels": "Все уровни", "from": "С даты", "to": "По дату", "refresh": "Обновить", "autoRefresh": "Авто-обновление", "colTime": "Время", "colService": "Сервис", "colAction": "Действие", "colStatus": "Статус", "colTenant": "Компания", "colSearchable": "Клиент", "colDuration": "мс", "noLogs": "Журналы не найдены", "loadError": "Ошибка загрузки журналов", "details": "Подробности", "errorDetails": "Ошибка", "page": "Страница {{page}} из {{total}}" },
     "settings": { "title": "Настройки", "comingSoon": "Глобальные настройки — скоро." },
     "tenants": {
       "title": "Компании", "newTenant": "Новая компания", "editTenant": "Редактировать компанию",

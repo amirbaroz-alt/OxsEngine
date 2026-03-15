@@ -12,4 +12,6 @@ const OTCSchema = new Schema<IOTC>({
   createdAt: { type: Date, default: Date.now, expires: 30 }, // TTL: 30 seconds
 });
 
-export const OTCModel = mongoose.model<IOTC>("OTC", OTCSchema);
+export const OTCModel =
+  (mongoose.models.OTC as mongoose.Model<IOTC>) ||
+  mongoose.model<IOTC>("OTC", OTCSchema);

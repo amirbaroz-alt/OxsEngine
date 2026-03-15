@@ -19,6 +19,7 @@ export interface ISystemLog extends Document {
   durationMs?: number;
   error?: string;
   data?: Record<string, unknown>;
+  searchable?: string;
   timestamp: Date;
 }
 
@@ -33,6 +34,7 @@ const SystemLogSchema = new Schema<ISystemLog>(
     durationMs:    { type: Number },
     error:         { type: String },
     data:          { type: Schema.Types.Mixed },
+    searchable:    { type: String, index: true },
     timestamp:     { type: Date, required: true },
   },
   {
@@ -47,7 +49,7 @@ SystemLogSchema.index({ createdAt: 1 }, { expireAfterSeconds: 30 * 24 * 60 * 60 
 SystemLogSchema.index({ tenantId: 1, timestamp: -1 });
 SystemLogSchema.index({ service: 1, status: 1, timestamp: -1 });
 
-const SystemLog =
+export const SystemLog =
   mongoose.models.SystemLog ||
   mongoose.model<ISystemLog>("SystemLog", SystemLogSchema);
 
@@ -83,6 +85,7 @@ async function processLogs(): Promise<void> {
         durationMs:    event.durationMs,
         error:         event.error,
         data:          event.data,
+        searchable:    event.searchable,
         timestamp:     new Date(event.timestamp),
       });
       await queueAdapter.ack(msg.id);

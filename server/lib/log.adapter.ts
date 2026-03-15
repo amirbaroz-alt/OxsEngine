@@ -21,12 +21,15 @@ export interface LogEventParams {
   durationMs?: number;
   error?: string;
   data?: Record<string, unknown>;
+  // Human-readable search token (phone, email, name, etc.) — stored indexed for fast search
+  searchable?: string;
 }
 
 export interface LogEvent extends LogEventParams {
   correlationId: string;
   level: LogLevel;
   timestamp: string; // ISO 8601
+  searchable?: string;
 }
 
 // ---------------------------------------------------------------------------

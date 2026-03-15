@@ -1640,7 +1640,7 @@
       "impersonate": "انتحال الهوية",
       "impersonateFailed": "فشل انتحال الهوية"
     },
-    "logs": { "title": "السجلات", "comingSoon": "عارض السجلات — قريباً." },
+    "logs": { "title": "السجلات", "comingSoon": "عارض السجلات — قريباً.", "search": "بحث (هاتف، بريد، اسم…)", "filterService": "الخدمة", "filterStatus": "الحالة", "filterLevel": "المستوى", "allServices": "كل الخدمات", "allStatuses": "كل الحالات", "allLevels": "كل المستويات", "from": "من تاريخ", "to": "إلى تاريخ", "refresh": "تحديث", "autoRefresh": "تحديث تلقائي", "colTime": "الوقت", "colService": "الخدمة", "colAction": "الإجراء", "colStatus": "الحالة", "colTenant": "الشركة", "colSearchable": "العميل", "colDuration": "ms", "noLogs": "لا توجد سجلات", "loadError": "فشل تحميل السجلات", "details": "تفاصيل", "errorDetails": "خطأ", "page": "صفحة {{page}} من {{total}}" },
     "settings": { "title": "الإعدادات", "comingSoon": "الإعدادات العامة — قريباً." },
     "tenants": {
       "title": "الشركات", "newTenant": "شركة جديدة", "editTenant": "تعديل الشركة",

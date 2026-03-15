@@ -91,7 +91,7 @@ export function registerApiGatewayRoutes(app: Express) {
       );
 
       if (!result.success) {
-        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "error", durationMs: Date.now() - startMs, error: result.error, data: { mode } }).catch(() => {});
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "error", durationMs: Date.now() - startMs, error: result.error, data: { mode }, searchable: key }).catch(() => {});
         return res.status(401).json({ success: false, error: result.error || "LOGIN_FAILED" });
       }
 
@@ -103,11 +103,11 @@ export function registerApiGatewayRoutes(app: Express) {
           role: result.user.role,
           name: result.user.name,
         });
-        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login-bypass", status: "success", durationMs: Date.now() - startMs, data: { mode, userId: String(result.user._id) } }).catch(() => {});
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login-bypass", status: "success", durationMs: Date.now() - startMs, data: { mode, userId: String(result.user._id) }, searchable: key }).catch(() => {});
         return res.json({ success: true, requiresOtp: false, token: jwt, user: result.user });
       }
 
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "success", durationMs: Date.now() - startMs, data: { mode } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "request-login", status: "success", durationMs: Date.now() - startMs, data: { mode }, searchable: key }).catch(() => {});
       log(`[${TAG}] OTP requested for ${key} on tenant ${tenantId}`, TAG);
       res.json({ success: true, requiresOtp: result.requiresOtp });
     } catch (err: any) {
@@ -126,10 +126,10 @@ export function registerApiGatewayRoutes(app: Express) {
     try {
       const { identifier, mode, otp, tenantId } = req.body;
 
-      if (!identifier || !mode || !otp || !tenantId) {
+      if (!identifier || !mode || !otp) {
         return res.status(400).json({
           success: false,
-          error: "identifier, mode, otp, tenantId are required",
+          error: "identifier, mode, otp are required",
         });
       }
 
@@ -150,7 +150,7 @@ export function registerApiGatewayRoutes(app: Express) {
       );
 
       if (!result) {
-        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "error", durationMs: Date.now() - startMs, error: "INVALID_OTP", data: { mode } }).catch(() => {});
+        logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "error", durationMs: Date.now() - startMs, error: "INVALID_OTP", data: { mode }, searchable: key }).catch(() => {});
         return res.status(401).json({ success: false, error: "INVALID_OTP" });
       }
 
@@ -162,7 +162,7 @@ export function registerApiGatewayRoutes(app: Express) {
         name: result.user.name,
       });
 
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "success", durationMs: Date.now() - startMs, data: { userId: String(result.user._id), mode } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "auth", action: "verify-login", status: "success", durationMs: Date.now() - startMs, data: { userId: String(result.user._id), mode }, searchable: key }).catch(() => {});
       log(`[${TAG}] JWT issued for user ${result.user._id} on tenant ${tenantId}`, TAG);
 
       res.json({
@@ -214,7 +214,7 @@ export function registerApiGatewayRoutes(app: Express) {
       const startMs = Date.now();
       const logEntry = await smsService.sendSms({ recipient, content, tenantId });
       const smsStatus = (logEntry as any).status === "Success" ? "success" : "error";
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "sms", action: "send", status: smsStatus, durationMs: Date.now() - startMs, data: { recipient, messageId: (logEntry as any).messageId || null } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "sms", action: "send", status: smsStatus, durationMs: Date.now() - startMs, data: { recipient, messageId: (logEntry as any).messageId || null }, searchable: recipient }).catch(() => {});
 
       log(`[${TAG}] SMS sent to ${recipient} for tenant ${tenantId}`, TAG);
 
@@ -251,7 +251,7 @@ export function registerApiGatewayRoutes(app: Express) {
 
       const startMs = Date.now();
       const result = await emailService.send({ to, subject, html, tenantId, replyTo });
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "email", action: "send", status: result.success ? "success" : "error", durationMs: Date.now() - startMs, error: result.success ? undefined : result.message, data: { to, credentialSource: result.credentialSource } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "email", action: "send", status: result.success ? "success" : "error", durationMs: Date.now() - startMs, error: result.success ? undefined : result.message, data: { to, credentialSource: result.credentialSource }, searchable: to }).catch(() => {});
 
       log(`[${TAG}] Email sent to ${to} for tenant ${tenantId}`, TAG);
 
@@ -283,13 +283,13 @@ export function registerApiGatewayRoutes(app: Express) {
       const { whatsappSenderService } = await import("../services/whatsapp-sender.service");
       const startMs = Date.now();
       const result = await whatsappSenderService.sendText({ to, message, tenantId });
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-text", status: "success", durationMs: Date.now() - startMs, data: { to } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-text", status: "success", durationMs: Date.now() - startMs, data: { to }, searchable: to }).catch(() => {});
 
       log(`[${TAG}] WhatsApp sent to ${to} for tenant ${tenantId}`, TAG);
 
       res.json({ success: true, data: result });
     } catch (err: any) {
-      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-text", status: "error", error: err.message }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-text", status: "error", error: err.message, searchable: req.body?.to }).catch(() => {});
       log(`[${TAG}] whatsapp/send error: ${err.message}`, TAG);
       res.status(500).json({ success: false, error: err.message || "INTERNAL_ERROR" });
     }
@@ -321,13 +321,13 @@ export function registerApiGatewayRoutes(app: Express) {
         components,
         tenantId,
       });
-      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-template", status: "success", durationMs: Date.now() - startMs, data: { to, templateName, languageCode } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId, service: "whatsapp", action: "send-template", status: "success", durationMs: Date.now() - startMs, data: { to, templateName, languageCode }, searchable: to }).catch(() => {});
 
       log(`[${TAG}] WhatsApp template '${templateName}' sent to ${to} for tenant ${tenantId}`, TAG);
 
       res.json({ success: true, data: result });
     } catch (err: any) {
-      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-template", status: "error", error: err.message, data: { templateName: req.body?.templateName } }).catch(() => {});
+      logAdapter.emit({ correlationId: req.correlationId, tenantId: req.body?.tenantId, service: "whatsapp", action: "send-template", status: "error", error: err.message, data: { templateName: req.body?.templateName }, searchable: req.body?.to }).catch(() => {});
       log(`[${TAG}] whatsapp/send-template error: ${err.message}`, TAG);
       res.status(500).json({ success: false, error: err.message || "INTERNAL_ERROR" });
     }
@@ -625,10 +625,11 @@ export function registerApiGatewayRoutes(app: Express) {
         return res.status(400).json({ success: false, error: "INVALID_USER_ID" });
       }
       const target = await UserModel.findById(req.params.userId)
-        .select("name email role tenantId active").lean();
+        .select("name email role tenantId active isLocked").lean();
       if (!target) return res.status(404).json({ success: false, error: "USER_NOT_FOUND" });
       if ((target as any).role === "superadmin") return res.status(403).json({ success: false, error: "CANNOT_IMPERSONATE_SUPERADMIN" });
       if (!(target as any).active) return res.status(400).json({ success: false, error: "USER_INACTIVE" });
+      if ((target as any).isLocked) return res.status(400).json({ success: false, error: "USER_LOCKED" });
 
       const impersonatorId = req.jwtPayload!.sub;
 
@@ -650,6 +651,7 @@ export function registerApiGatewayRoutes(app: Express) {
         service: "impersonation",
         action: "impersonation-start",
         status: "success",
+        searchable: (target as any).email,
         data: {
           impersonatorId,
           targetUserId: String(target._id),
@@ -680,12 +682,71 @@ export function registerApiGatewayRoutes(app: Express) {
       const otc = await OTCModel.findOneAndDelete({ code });
       if (!otc) return res.status(401).json({ success: false, error: "INVALID_OR_EXPIRED_CODE" });
       // Application-level expiry check (MongoDB TTL runs every ~60s, not every second)
-      if (Date.now() - otc.createdAt.getTime() > 30_000) {
+      if (!otc.createdAt || Date.now() - otc.createdAt.getTime() > 30_000) {
         return res.status(401).json({ success: false, error: "INVALID_OR_EXPIRED_CODE" });
       }
       const payload = jwtService.decode(otc.token);
+      if (!payload) return res.status(500).json({ success: false, error: "TOKEN_DECODE_ERROR" });
       res.json({ success: true, token: otc.token, user: payload });
     } catch (err: any) {
+      res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  // ADMIN — LOGS  (SuperAdmin only)
+  // ─────────────────────────────────────────────
+
+  /**
+   * GET /api/v1/admin/logs
+   * Query: { tenantId?, service?, status?, level?, search?, from?, to?, page?, limit? }
+   * Returns paginated system_logs with optional full-text search on `searchable` field.
+   */
+  app.get("/api/v1/admin/logs", requireJwt, requireJwtRole("superadmin"), async (req, res) => {
+    try {
+      const { SystemLog } = await import("../jobs/log.processor");
+      const filter: any = {};
+
+      if (req.query.tenantId) filter.tenantId = req.query.tenantId;
+      if (req.query.service)  filter.service  = req.query.service;
+      if (req.query.status)   filter.status   = req.query.status;
+      if (req.query.level)    filter.level    = req.query.level;
+
+      // Human-readable search: phone, email, etc. — escape regex special chars to prevent ReDoS
+      if (req.query.search) {
+        const q = String(req.query.search).trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (q) filter.searchable = { $regex: q, $options: "i" };
+      }
+
+      if (req.query.from || req.query.to) {
+        filter.timestamp = {};
+        if (req.query.from) {
+          const d = new Date(String(req.query.from));
+          if (isNaN(d.getTime())) return res.status(400).json({ success: false, error: "INVALID_FROM_DATE" });
+          filter.timestamp.$gte = d;
+        }
+        if (req.query.to) {
+          const d = new Date(String(req.query.to));
+          if (isNaN(d.getTime())) return res.status(400).json({ success: false, error: "INVALID_TO_DATE" });
+          filter.timestamp.$lte = d;
+        }
+      }
+
+      const page  = Math.max(1, parseInt(req.query.page  as string) || 1);
+      const limit = Math.min(200, parseInt(req.query.limit as string) || 50);
+
+      const [logs, total] = await Promise.all([
+        SystemLog.find(filter)
+          .sort({ timestamp: -1 })
+          .skip((page - 1) * limit)
+          .limit(limit)
+          .lean(),
+        SystemLog.countDocuments(filter),
+      ]);
+
+      res.json({ success: true, data: logs, total, page, totalPages: Math.ceil(total / limit) });
+    } catch (err: any) {
+      log(`[${TAG}] admin/logs error: ${err.message}`, TAG);
       res.status(500).json({ success: false, error: "INTERNAL_ERROR" });
     }
   });

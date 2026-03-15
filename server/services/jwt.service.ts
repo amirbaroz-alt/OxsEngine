@@ -77,7 +77,9 @@ class JwtService {
     const [h, pl, sig] = parts;
     const sec = getSecret();
     const expected = sign(h, pl, sec);
-    if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected)))
+    const sigBuf = Buffer.from(sig);
+    const expBuf = Buffer.from(expected);
+    if (sigBuf.length !== expBuf.length || !crypto.timingSafeEqual(sigBuf, expBuf))
       throw new Error("JWT_INVALID_SIGNATURE");
     let d: JwtPayload;
     try { d = JSON.parse(b64dec(pl)) as JwtPayload; } catch { throw new Error("JWT_DECODE_ERROR"); }
